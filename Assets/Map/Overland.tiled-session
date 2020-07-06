@@ -1,0 +1,43 @@
+{
+    "activeFile": "overland.tmx",
+    "fileStates": {
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/overland.tsx": {
+            "scaleInDock": 1
+        },
+        "overland.tmx": {
+            "scale": 0.33,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": 1456.0606060606062,
+                "y": 1684.848484848485
+            }
+        },
+        "overland.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "rules.tmx": {
+            "scale": 0.7286931818181818,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 496.77972709551665,
+                "y": 513.2475633528267
+            }
+        },
+        "rules.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "openFiles": [
+        "overland.tsx",
+        "overland.tmx"
+    ],
+    "recentFiles": [
+        "overland.tsx",
+        "overland.tmx",
+        "rules.tmx",
+        "rules.tsx"
+    ]
+}
