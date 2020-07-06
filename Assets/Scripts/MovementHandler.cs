@@ -58,14 +58,14 @@ public class MovementHandler : MonoBehaviour {
             }         
 
             rules.Add(child.name, rule);
-            Debug.Log("tilemap: " + child.name + ", rule: " + rule);
+            //Debug.Log("tilemap: " + child.name + ", rule: " + rule);
         }
     }
 
     public bool movePlayer(Vector3 targetLocation) {
         Vector3Int tilePos = grid.WorldToCell(targetLocation); 
-        Debug.Log("***************************************************");
-        Debug.Log("targetLoc: " + targetLocation + " targetCell: " + tilePos + " count: " + grid.transform.childCount);
+        //Debug.Log("***************************************************");
+        //Debug.Log("targetLoc: " + targetLocation + " targetCell: " + tilePos + " count: " + grid.transform.childCount);
         
         for (int i = 0; i < grid.transform.childCount; i++) {
             GameObject child = grid.transform.GetChild(i).gameObject;
@@ -74,11 +74,11 @@ public class MovementHandler : MonoBehaviour {
             rules.TryGetValue(child.name, out rule);
             if (rule != null) {
                 Tilemap tilemap = child.GetComponent(typeof(Tilemap)) as Tilemap;   
-                Debug.Log("tilemap: " + tilemap.name + ", rule: " + rule);
+                //Debug.Log("tilemap: " + tilemap.name + ", rule: " + rule);
 
                 TileBase tile = tilemap.GetTile(tilePos);
                 if (tile != null) {
-                    Debug.Log("Tile matched");
+                    //Debug.Log("Tile matched");
 
                     if (inventory.hasRequiredItem(rule.requiredItem)) {
                         questHandler.incrementTime(rule.cost);
@@ -86,7 +86,7 @@ public class MovementHandler : MonoBehaviour {
                     } else if (rule.requiredItem == QuestItem.ENTRANCE) {
                         foreach (GameObject entrance in entrances) {
                             if (Vector3.Distance(entrance.transform.position, targetLocation) <= 0.05f) {
-                                Debug.Log("Enter location: " + entrance.name);
+                                //Debug.Log("Enter location: " + entrance.name);
                                 return true;
                             }
                         }
