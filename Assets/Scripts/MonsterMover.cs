@@ -13,6 +13,10 @@ public class MonsterMover : MonoBehaviour {
 
     public Transform movePoint;
 
+    public TileType[] allowedTiles;
+
+    public MovementHandler movementHandler;
+
     private bool isMoving = true;
 
     // Start is called before the first frame update
@@ -37,7 +41,8 @@ public class MonsterMover : MonoBehaviour {
     }
 
     IEnumerator HandleMove() {
-        float delay = attackDelay;      
+        float delay = attackDelay;   
+        Vector3 targetLocation = Vector3.forward;   
         if (Vector3.Distance(transform.position, player.position) <= range) {
             // move towards the player
             Vector3 vec = transform.position - player.position;
@@ -46,16 +51,16 @@ public class MonsterMover : MonoBehaviour {
             if (Mathf.Abs(vec.x) > Mathf.Abs(vec.y)) {
                 // use x
                 if (vec.x > 0) {
-                    movePoint.position = movePoint.position + Vector3.left;
+                    targetLocation = movePoint.position + Vector3.left;
                 } else {
-                    movePoint.position = movePoint.position + Vector3.right;
+                    targetLocation = movePoint.position + Vector3.right;
                 }
             } else {
                 // use y
                 if (vec.y > 0) {
-                    movePoint.position = movePoint.position + Vector3.down;
+                    targetLocation = movePoint.position + Vector3.down;
                 } else {
-                    movePoint.position = movePoint.position + Vector3.up;
+                    targetLocation = movePoint.position + Vector3.up;
                 }
             }
         } else {  
@@ -64,19 +69,26 @@ public class MonsterMover : MonoBehaviour {
             delay = Random.Range(100f, 600f) / 100;
             switch(dir) {
                 case 0:
-                    movePoint.position = movePoint.position + Vector3.up;
+                    targetLocation = movePoint.position + Vector3.up;
                     break;
                 case 1:
-                    movePoint.position = movePoint.position + Vector3.left;
+                    targetLocation = movePoint.position + Vector3.left;
                     break;
                 case 2:
-                    movePoint.position = movePoint.position + Vector3.right;
+                    targetLocation = movePoint.position + Vector3.right;
                     break;
                 case 3:
-                    movePoint.position = movePoint.position + Vector3.down;
+                    targetLocation = movePoint.position + Vector3.down;
                 break;
             }
-        }           
+        }    
+
+        if (targetLocation != Vector3.forward && movementHandler.validateMove(targetLocation, false, allowedTiles)) {
+            movePoint.position = targetLocation;
+        } else {
+            // illegal move, try agian next frame
+            delay = 0;
+        }    
                
         //Debug.Log("Target: " + movePoint.position + ", delay: " + delay);                      
         yield return new WaitForSeconds(delay);

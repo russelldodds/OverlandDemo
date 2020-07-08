@@ -58,7 +58,7 @@ public class SimpleAnimation : MonoBehaviour {
             } else {
                 currentDirection = Direction.DOWN;
             }  
-            Debug.Log("Vector: " + vec + ", currentDirection: " + currentDirection);           
+            //Debug.Log("Vector: " + vec + ", currentDirection: " + currentDirection);           
             StopAllCoroutines();
             StartCoroutine(Animate());
         }

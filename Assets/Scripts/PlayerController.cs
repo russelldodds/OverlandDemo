@@ -4,6 +4,8 @@ public class PlayerController : MonoBehaviour {
 
     public MovementHandler movementHandler;
 
+    public TileType[] allowedTiles;
+
     public float speed = 5f;
 
     public Transform movePoint;
@@ -25,7 +27,7 @@ public class PlayerController : MonoBehaviour {
                 targetLocation = movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
             } 
 
-            if (targetLocation != Vector3.forward && movementHandler.movePlayer(targetLocation)) {
+            if (targetLocation != Vector3.forward && movementHandler.validateMove(targetLocation, true, allowedTiles)) {
                 movePoint.position = targetLocation;  
             }
         }

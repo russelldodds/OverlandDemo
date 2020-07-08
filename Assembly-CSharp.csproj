@@ -37,13 +37,14 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Direction.cs" />
+     <Compile Include="Assets\Scripts\MonsterGenerator.cs" />
      <Compile Include="Assets\Scripts\MonsterMover.cs" />
      <Compile Include="Assets\Scripts\MovementHandler.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerInventory.cs" />
      <Compile Include="Assets\Scripts\QuestHandler.cs" />
-     <Compile Include="Assets\Scripts\QuestItem.cs" />
      <Compile Include="Assets\Scripts\SimpleAnimation.cs" />
+     <Compile Include="Assets\Scripts\TileType.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2019.4.2f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

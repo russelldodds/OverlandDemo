@@ -8,16 +8,14 @@ public class MovementHandler : MonoBehaviour {
 
     private class Rules {
         public int cost;
-        public QuestItem requiredItem;
+        public TileType tileType;
 
         public override string ToString() {
-            return "cost: " + cost + ", requiredItem: " + requiredItem;
+            return "cost: " + cost + ", tileType: " + tileType;
         }
     }
 
     public Grid grid;
-
-    private PlayerInventory inventory;
 
     private QuestHandler questHandler;
 
@@ -27,7 +25,6 @@ public class MovementHandler : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        inventory = this.GetComponent(typeof(PlayerInventory)) as PlayerInventory; 
         questHandler = this.GetComponent(typeof(QuestHandler)) as QuestHandler; 
         
         Transform entranceParent = transform.Find("Entrances");
@@ -52,9 +49,9 @@ public class MovementHandler : MonoBehaviour {
             CustomProperty propRequired;
             props.TryGetCustomProperty("required", out propRequired);
             if (propRequired != null) {
-                rule.requiredItem = propRequired.GetValueAsEnum<QuestItem>();
+                rule.tileType = propRequired.GetValueAsEnum<TileType>();
             } else {
-                rule.requiredItem = QuestItem.NONE;
+                rule.tileType = TileType.NONE;
             }         
 
             rules.Add(child.name, rule);
@@ -62,7 +59,7 @@ public class MovementHandler : MonoBehaviour {
         }
     }
 
-    public bool movePlayer(Vector3 targetLocation) {
+    public bool validateMove(Vector3 targetLocation, bool isPlayer, TileType[] tileTypes) {
         Vector3Int tilePos = grid.WorldToCell(targetLocation); 
         //Debug.Log("***************************************************");
         //Debug.Log("targetLoc: " + targetLocation + " targetCell: " + tilePos + " count: " + grid.transform.childCount);
@@ -79,23 +76,37 @@ public class MovementHandler : MonoBehaviour {
                 TileBase tile = tilemap.GetTile(tilePos);
                 if (tile != null) {
                     //Debug.Log("Tile matched");
-
-                    if (inventory.hasRequiredItem(rule.requiredItem)) {
-                        questHandler.incrementTime(rule.cost);
-                        return true;
-                    } else if (rule.requiredItem == QuestItem.ENTRANCE) {
-                        foreach (GameObject entrance in entrances) {
-                            if (Vector3.Distance(entrance.transform.position, targetLocation) <= 0.05f) {
-                                //Debug.Log("Enter location: " + entrance.name);
+                    if (isAllowedTile(rule.tileType, tileTypes)) {
+                        if (isPlayer) {
+                            if (rule.tileType == TileType.ENTRANCE) {
+                                foreach (GameObject entrance in entrances) {
+                                    if (Vector3.Distance(entrance.transform.position, targetLocation) <= 0.05f) {
+                                        //Debug.Log("Enter location: " + entrance.name);
+                                        return true;
+                                    }
+                                }
+                                return false;
+                            } else {
+                                questHandler.incrementTime(rule.cost);
                                 return true;
                             }
-                        }
-                        return false;
+                        } else {
+                            return true;
+                        }                       
                     } else {
                         // only allow the first rule to be processed
                         return false;
                     }
                 }
+            }
+        }
+        return false;
+    }
+
+    private bool isAllowedTile(TileType tileType, TileType[] tileTypes) {
+        foreach (TileType checkTile in tileTypes) {
+            if (checkTile == tileType) {
+                return true;
             }
         }
         return false;
