@@ -15,9 +15,13 @@ public class MovementHandler : MonoBehaviour {
         }
     }
 
+    public PlayerController playerController;
+
     public Grid grid;
 
     private QuestHandler questHandler;
+
+    private SaveLoadHandler saveLoadHandler;
 
     private List<GameObject> entrances = new List<GameObject>();
 
@@ -26,6 +30,7 @@ public class MovementHandler : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         questHandler = this.GetComponent(typeof(QuestHandler)) as QuestHandler; 
+        saveLoadHandler = this.GetComponent(typeof(SaveLoadHandler)) as SaveLoadHandler;
         
         Transform entranceParent = transform.Find("Entrances");
         for (int i = 0; i < entranceParent.childCount; i++) {
@@ -59,7 +64,7 @@ public class MovementHandler : MonoBehaviour {
         }
     }
 
-    public bool validateMove(Vector3 targetLocation, bool isPlayer, TileType[] tileTypes) {
+    public bool ValidateMove(Vector3 targetLocation, bool isPlayer, TileType[] tileTypes) {
         Vector3Int tilePos = grid.WorldToCell(targetLocation); 
         //Debug.Log("***************************************************");
         //Debug.Log("targetLoc: " + targetLocation + " targetCell: " + tilePos + " count: " + grid.transform.childCount);
@@ -76,18 +81,19 @@ public class MovementHandler : MonoBehaviour {
                 TileBase tile = tilemap.GetTile(tilePos);
                 if (tile != null) {
                     //Debug.Log("Tile matched");
-                    if (isAllowedTile(rule.tileType, tileTypes)) {
+                    if (IsAllowedTile(rule.tileType, tileTypes)) {
                         if (isPlayer) {
                             if (rule.tileType == TileType.ENTRANCE) {
                                 foreach (GameObject entrance in entrances) {
                                     if (Vector3.Distance(entrance.transform.position, targetLocation) <= 0.05f) {
                                         //Debug.Log("Enter location: " + entrance.name);
+                                        saveLoadHandler.Save();
                                         return true;
                                     }
                                 }
                                 return false;
                             } else {
-                                questHandler.incrementTime(rule.cost);
+                                questHandler.IncrementTime(rule.cost);
                                 return true;
                             }
                         } else {
@@ -103,7 +109,7 @@ public class MovementHandler : MonoBehaviour {
         return false;
     }
 
-    private bool isAllowedTile(TileType tileType, TileType[] tileTypes) {
+    private bool IsAllowedTile(TileType tileType, TileType[] tileTypes) {
         foreach (TileType checkTile in tileTypes) {
             if (checkTile == tileType) {
                 return true;

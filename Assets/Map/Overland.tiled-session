@@ -1,15 +1,17 @@
 {
     "activeFile": "overland.tmx",
+    "expandedProjectPaths": [
+    ],
     "fileStates": {
         "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/overland.tsx": {
             "scaleInDock": 1
         },
         "overland.tmx": {
-            "scale": 0.33,
-            "selectedLayer": 7,
+            "scale": 1.5,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 1456.0606060606062,
-                "y": 1684.848484848485
+                "x": 1322.3333333333333,
+                "y": 1547.3333333333333
             }
         },
         "overland.tsx": {
@@ -34,6 +36,7 @@
         "overland.tsx",
         "overland.tmx"
     ],
+    "project": "",
     "recentFiles": [
         "overland.tsx",
         "overland.tmx",

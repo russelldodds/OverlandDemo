@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestHandler : MonoBehaviour {
-    public long minutes;
-    // Start is called before the first frame update
-    void Start() {
-        // TODO: load from save file
-        minutes = 0;
+public class QuestHandler : MonoBehaviour, IDataSerialiizer {
+    public long minutes = 0;
+ 
+    public void IncrementTime(long increment) {
+        minutes += increment;
     }
 
-    public void incrementTime(long increment) {
-        minutes += increment;
+    public void Save() {
+        PlayerPrefsX.SetLong("gameMinutes", minutes);
+    }
+
+    public void Load() {
+        long gameMinutes = PlayerPrefsX.GetLong("gameMinutes");
+        minutes = gameMinutes;
     }
 }

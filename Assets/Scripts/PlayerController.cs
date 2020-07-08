@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour, IDataSerialiizer {
 
     public MovementHandler movementHandler;
 
@@ -27,9 +27,36 @@ public class PlayerController : MonoBehaviour {
                 targetLocation = movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
             } 
 
-            if (targetLocation != Vector3.forward && movementHandler.validateMove(targetLocation, true, allowedTiles)) {
+            if (targetLocation != Vector3.forward && movementHandler.ValidateMove(targetLocation, true, allowedTiles)) {
                 movePoint.position = targetLocation;  
             }
         }
+    }
+
+    public void Save() {
+        PlayerPrefsX.SetVector3("playerPosition", transform.position);
+
+        string [] strAllowedTiles = new string[allowedTiles.Length];
+        for (int i = 0; i < allowedTiles.Length; i++) {
+            strAllowedTiles[i] = allowedTiles[i].ToString();
+        }
+        PlayerPrefsX.SetStringArray("playerTiles", strAllowedTiles);
+    }
+
+    public void Load() {
+        Vector3 playerPosition = PlayerPrefsX.GetVector3("playerPosition");
+        if (playerPosition != null) {
+            transform.position = playerPosition;
+            movePoint.position = playerPosition;
+        }
+        string [] strAllowedTiles = PlayerPrefsX.GetStringArray("playerTiles");
+        if (strAllowedTiles != null) {
+            allowedTiles = new TileType[strAllowedTiles.Length];
+            for (int i = 0; i < allowedTiles.Length; i++) {
+                allowedTiles[i] = (TileType)System.Enum.Parse(typeof(TileType), strAllowedTiles[i]);
+            }
+        }
+
+        Debug.Log("LOADED position: " + playerPosition);
     }
 }

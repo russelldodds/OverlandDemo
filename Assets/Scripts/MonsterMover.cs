@@ -17,6 +17,8 @@ public class MonsterMover : MonoBehaviour {
 
     public MovementHandler movementHandler;
 
+    public int monsterType;
+
     private bool isMoving = true;
 
     // Start is called before the first frame update
@@ -83,7 +85,7 @@ public class MonsterMover : MonoBehaviour {
             }
         }    
 
-        if (targetLocation != Vector3.forward && movementHandler.validateMove(targetLocation, false, allowedTiles)) {
+        if (targetLocation != Vector3.forward && movementHandler.ValidateMove(targetLocation, false, allowedTiles)) {
             movePoint.position = targetLocation;
         } else {
             // illegal move, try agian next frame

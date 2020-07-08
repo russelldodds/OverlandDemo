@@ -37,12 +37,15 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Direction.cs" />
+     <Compile Include="Assets\Scripts\IDataSerialiizer.cs" />
      <Compile Include="Assets\Scripts\MonsterGenerator.cs" />
      <Compile Include="Assets\Scripts\MonsterMover.cs" />
      <Compile Include="Assets\Scripts\MovementHandler.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerInventory.cs" />
+     <Compile Include="Assets\Scripts\PlayerPrefsX.cs" />
      <Compile Include="Assets\Scripts\QuestHandler.cs" />
+     <Compile Include="Assets\Scripts\SaveLoadHandler.cs" />
      <Compile Include="Assets\Scripts\SimpleAnimation.cs" />
      <Compile Include="Assets\Scripts\TileType.cs" />
     <Reference Include="UnityEngine">

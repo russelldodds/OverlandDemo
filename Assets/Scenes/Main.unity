@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 757077991}
   - component: {fileID: 757077990}
   - component: {fileID: 757077992}
+  - component: {fileID: 757077993}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -329,6 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c2216d8bc84400fbc17fa8b4b66fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 1060546557}
   grid: {fileID: 1924556026}
 --- !u!114 &757077991
 MonoBehaviour:
@@ -355,6 +357,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37450e9db12bd43a0a5f2ce5affbe1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &757077993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757077988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41869a49a38a049a9b766676b895c98e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterGenerator: {fileID: 748691868}
+  playerController: {fileID: 1060546557}
+  questHandler: {fileID: 757077991}
+  playerInventory: {fileID: 757077992}
+  loadAtStart: 0
 --- !u!1 &908021878
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +555,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450526162729637375, guid: 3d6c27027857447eab37d0d1386f0dff,
+        type: 3}
+      propertyPath: orthographic size
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d6c27027857447eab37d0d1386f0dff, type: 3}
