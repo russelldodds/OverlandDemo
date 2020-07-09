@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour, IDataSerialiizer {
 
     // Start is called before the first frame update
     void Start() {
-        movePoint.parent = null;     
+        movePoint.parent = null;  
     }
 
     // Update is called once per frame
@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour, IDataSerialiizer {
                 targetLocation = movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
             } 
 
+            //Debug.Log("Playeer pos: " + transform.position + ", Target pos: " + targetLocation);
             if (targetLocation != Vector3.forward && movementHandler.ValidateMove(targetLocation, true, allowedTiles)) {
                 movePoint.position = targetLocation;  
             }
@@ -46,6 +47,9 @@ public class PlayerController : MonoBehaviour, IDataSerialiizer {
     public void Load() {
         Vector3 playerPosition = PlayerPrefsX.GetVector3("playerPosition");
         if (playerPosition != null) {
+            // seems like the laoding causes float errors
+            playerPosition.x = Mathf.RoundToInt(playerPosition.x);
+            playerPosition.y = Mathf.RoundToInt(playerPosition.y);
             transform.position = playerPosition;
             movePoint.position = playerPosition;
         }

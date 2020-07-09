@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementHandler: {fileID: 0}
-  allowedTiles: 000000000200000004000000
+  allowedTiles: 0000000001000000030000000400000006000000
   speed: 5
   movePoint: {fileID: 5450526163565063750}
 --- !u!1 &5450526162729637372

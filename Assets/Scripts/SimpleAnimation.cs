@@ -20,7 +20,9 @@ public class SimpleAnimation : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {  
-        spriteRenderer = this.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
+        isMoving = false;
+        currentDirection = Direction.UP;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -29,21 +31,8 @@ public class SimpleAnimation : MonoBehaviour {
         if (isMoving && Vector3.Distance(transform.parent.position, movePoint.position) == 0) {
             // end move  
             isMoving = false;
-            StopAllCoroutines();    
-            switch(currentDirection) {
-                case Direction.UP:
-                    spriteRenderer.sprite = up[0];
-                    break;
-                case Direction.LEFT:
-                    spriteRenderer.sprite = left[0];
-                    break;
-                case Direction.RIGHT:
-                    spriteRenderer.sprite = right[0];
-                    break;
-                default:
-                    spriteRenderer.sprite = down[0];
-                break;
-            }  
+            StopAllCoroutines(); 
+            FaceDirection(currentDirection); 
         } else if (!isMoving && Vector3.Distance(transform.parent.position, movePoint.position) >= 0.8f) {
             // start move
             isMoving = true;
@@ -58,9 +47,29 @@ public class SimpleAnimation : MonoBehaviour {
             } else {
                 currentDirection = Direction.DOWN;
             }  
-            //Debug.Log("Vector: " + vec + ", currentDirection: " + currentDirection);           
+            //Debug.Log("Vector: " + vec + ", currentDirection: " + currentDirection); 
+            FaceDirection(currentDirection);      
             StopAllCoroutines();
             StartCoroutine(Animate());
+        }
+    }
+    public void FaceDirection(Direction direction) {
+        if (!isMoving && spriteRenderer != null) {
+            currentDirection = direction;
+            switch(currentDirection) {
+                case Direction.UP:
+                    spriteRenderer.sprite = up[0];
+                    break;
+                case Direction.LEFT:
+                    spriteRenderer.sprite = left[0];
+                    break;
+                case Direction.RIGHT:
+                    spriteRenderer.sprite = right[0];
+                    break;
+                default:
+                    spriteRenderer.sprite = down[0];
+                break;
+            }
         }
     }
 

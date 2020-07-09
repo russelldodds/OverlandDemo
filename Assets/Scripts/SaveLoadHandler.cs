@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class SaveLoadHandler : MonoBehaviour
-{
+public class SaveLoadHandler : MonoBehaviour {
 
     public MonsterGenerator monsterGenerator;
 
@@ -15,14 +15,14 @@ public class SaveLoadHandler : MonoBehaviour
 
     public bool loadAtStart = false;
 
-    private bool isProcessing = false;
+    public bool isProcessing = false;
 
     // Start is called before the first frame update
     IEnumerator Start() {
-        if (loadAtStart) {
+       if (loadAtStart) {
             // delay to allow map and things to load
-            yield return new WaitForSeconds(0.1f);
-            Load();
+            yield return new WaitForEndOfFrame();
+            Load();           
         }
     }
 
@@ -36,20 +36,23 @@ public class SaveLoadHandler : MonoBehaviour
     }
 
     public void Save() {
+        //Debug.Log("SAVING");
         isProcessing = true;
-        monsterGenerator.Save();
-        playerController.Save();
-        questHandler.Save();
-        playerInventory.Save();
+        monsterGenerator?.Save();
+        playerController?.Save();
+        questHandler?.Save();
+        playerInventory?.Save();
         isProcessing = false;
     }
 
     public void Load() {
-        Debug.Log("LOADING");
-        playerController.Load();
-        monsterGenerator.Load();
-        questHandler.Load();
-        playerInventory.Load();
+        //Debug.Log("LOADING");
+        isProcessing = true;
+        playerController?.Load();
+        monsterGenerator?.Load();
+        questHandler?.Load();
+        playerInventory?.Load();
         isProcessing = false;    
     }
+
 }
