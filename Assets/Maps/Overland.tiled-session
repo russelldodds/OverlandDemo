@@ -1,5 +1,5 @@
 {
-    "activeFile": "overland.tmx",
+    "activeFile": "../Maps/Tower1.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -8,16 +8,16 @@
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 964.5,
-                "y": 1316
+                "x": 1023.5,
+                "y": 1024
             }
         },
         "../Maps/Tower1.tmx": {
             "scale": 1,
-            "selectedLayer": -1,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 1078.5,
-                "y": 1971
+                "x": 1077.5,
+                "y": 1970
             }
         },
         "../Maps/World.tmx": {
@@ -126,22 +126,28 @@
     },
     "map.lastUsedFormat": "tmx",
     "openFiles": [
-        "overland.tsx",
-        "overland.tmx"
-    ],
-    "project": "",
-    "recentFiles": [
+        "../Maps/Tower1.tmx",
         "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/DirtPathTileSet.tsx",
-        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/WallTileSet.tsx",
-        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/FlowerTileSet.tsx",
-        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/GroundTileSet.tsx",
         "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/TerrainOvelayTileSet.tsx",
         "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/TownCastleTileSet.tsx",
-        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/TownTileSet.tsx",
-        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/WaterFallTileSet.tsx",
         "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/WaterTileSet.tsx",
-        "overland.tsx",
-        "overland.tmx",
-        "Town1.tmx"
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/GroundTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/TownTileSet.tsx",
+        "../Maps/Castle1.tmx"
+    ],
+    "project": "Overland.tiled-project",
+    "recentFiles": [
+        "../Maps/Castle1.tmx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/TownTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/GroundTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/WaterTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/TownCastleTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/TerrainOvelayTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/DirtPathTileSet.tsx",
+        "../Maps/Tower1.tmx",
+        "../Maps/World.tmx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/WallTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/FlowerTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/WaterFallTileSet.tsx"
     ]
 }
