@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour, IDataSerialiizer {
 
     public void Load() {
         Vector3 playerPosition = PlayerPrefsX.GetVector3("playerPosition");
-        if (playerPosition != null) {
+        if (playerPosition != null && playerPosition != Vector3.zero) {
             // seems like the laoding causes float errors
             playerPosition.x = Mathf.RoundToInt(playerPosition.x);
             playerPosition.y = Mathf.RoundToInt(playerPosition.y);
