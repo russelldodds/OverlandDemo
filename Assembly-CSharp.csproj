@@ -37,7 +37,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Direction.cs" />
+     <Compile Include="Assets\Scripts\FadeHandler.cs" />
      <Compile Include="Assets\Scripts\IDataSerialiizer.cs" />
+     <Compile Include="Assets\Scripts\LoccationHandler.cs" />
      <Compile Include="Assets\Scripts\MonsterGenerator.cs" />
      <Compile Include="Assets\Scripts\MonsterMover.cs" />
      <Compile Include="Assets\Scripts\MovementHandler.cs" />

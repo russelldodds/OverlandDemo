@@ -162,8 +162,9 @@ MonoBehaviour:
   attackDelay: 0.2
   player: {fileID: 0}
   movePoint: {fileID: 1012728194573053435}
-  allowedTiles: 0000000002000000
+  allowedTiles: 00000000010000000300000004000000
   movementHandler: {fileID: 0}
+  monsterType: 0
 --- !u!1 &1012728194573053434
 GameObject:
   m_ObjectHideFlags: 0

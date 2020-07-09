@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 
 public enum TileType {
-    NONE, 
+    BASE, 
+    ROAD,
     WATER,
-    TREES, 
-    MOUNTAINS, 
-    ENTRANCE
+    TREE, 
+    GRASS, 
+    MOUNTAIN, 
+    LOCATION
 }

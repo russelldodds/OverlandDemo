@@ -12,13 +12,12 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
 
     public GameObject[] monsterPrefabs;
 
-    private MovementHandler movementHandler;
+    public MovementHandler movementHandler;
 
     public SuperTiled2Unity.SuperMap map;
 
     // Start is called before the first frame update
     IEnumerator Start() {
-        movementHandler = GetComponentInParent(typeof(MovementHandler)) as MovementHandler;
         yield return new WaitForSeconds(respawnRate);
         StartCoroutine(Respawn());
     }
@@ -27,7 +26,7 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
         int monsterType = Random.Range(0, 1000 * monsterPrefabs.Length) % monsterPrefabs.Length;
         
         GameObject monsterPrefab = monsterPrefabs[monsterType];
-        MonsterMover mover = monsterPrefab.GetComponent(typeof(MonsterMover)) as MonsterMover;
+        MonsterMover mover = monsterPrefab.GetComponent<MonsterMover>();
 
         int count = 0;
         Vector3 targetLocation = Vector3.forward;
@@ -43,7 +42,7 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
         //Debug.Log("prefab: " + monsterPrefab + ", mover: " + mover);
         GameObject monster = Instantiate(monsterPrefab, targetLocation, Quaternion.identity);
         monster.transform.parent = transform;
-        mover = monster.GetComponent(typeof(MonsterMover)) as MonsterMover;
+        mover = monster.GetComponent<MonsterMover>();
         mover.player = playerController.transform;
         mover.movementHandler = movementHandler;
         mover.monsterType = monsterType;
@@ -73,7 +72,7 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
         int[] monsterTypes = new int[transform.childCount];
 
         for (int i = 0; i < transform.childCount; i++) {
-            MonsterMover mover = transform.GetChild(i).GetComponent(typeof(MonsterMover)) as MonsterMover;
+            MonsterMover mover = transform.GetChild(i).GetComponent<MonsterMover>();
             monsterLocations[i] = mover.transform.position;
             monsterTypes[i] = mover.monsterType;
         }
@@ -96,7 +95,7 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
                 Vector3 targetLocation = monsterLocations[i];
 
                 GameObject monsterPrefab = monsterPrefabs[monsterType];
-                MonsterMover mover = monsterPrefab.GetComponent(typeof(MonsterMover)) as MonsterMover;
+                MonsterMover mover = monsterPrefab.GetComponent<MonsterMover>();
 
                 InstantiateMonster(monsterPrefab, mover, targetLocation, monsterType); 
             }

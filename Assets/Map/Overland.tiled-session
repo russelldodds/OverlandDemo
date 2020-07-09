@@ -2,9 +2,101 @@
     "activeFile": "overland.tmx",
     "expandedProjectPaths": [
     ],
+    "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "../Maps/Castle1.tmx": {
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 964.5,
+                "y": 1316
+            }
+        },
+        "../Maps/Tower1.tmx": {
+            "scale": 1,
+            "selectedLayer": -1,
+            "viewCenter": {
+                "x": 1078.5,
+                "y": 1971
+            }
+        },
+        "../Maps/World.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 2372.6666666666665,
+                "y": 2370.6666666666665
+            }
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Art/Pipoya RPG Tileset 32x32/SampleMap/[A]Flower_pipo.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Art/Pipoya RPG Tileset 32x32/SampleMap/[A]Grass_pipo.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Art/Pipoya RPG Tileset 32x32/SampleMap/[A]WaterFall_pipo.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Art/Pipoya RPG Tileset 32x32/SampleMap/[A]Water_pipo.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Art/Pipoya RPG Tileset 32x32/SampleMap/samplemap.tmx": {
+            "scale": 0.35,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 935.7142857142858,
+                "y": 977.1428571428571
+            }
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Art/Pipoya RPG Tileset 32x32/SampleMap/samplemap.tmx#[Base]BaseChip_pipo": {
+            "scaleInDock": 1
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/DirtPathTileSet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/FlowerTileSet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/GroundTileSet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/TerrainOvelayTileSet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/TownCastleTileSet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/TownTileSet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/WallTileSet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/WaterFallTileSet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/WaterTileSet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/overland.tsx": {
             "scaleInDock": 1
+        },
+        "Town1.tmx": {
+            "scale": 0.3247355769230769,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1008.5128432896587,
+                "y": 1025.4497001998668
+            }
         },
         "overland.tmx": {
             "scale": 1.5,
@@ -32,15 +124,24 @@
             "scaleInEditor": 1
         }
     },
+    "map.lastUsedFormat": "tmx",
     "openFiles": [
         "overland.tsx",
         "overland.tmx"
     ],
     "project": "",
     "recentFiles": [
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/DirtPathTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/WallTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/FlowerTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/GroundTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/TerrainOvelayTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/TownCastleTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/TownTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/WaterFallTileSet.tsx",
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/WaterTileSet.tsx",
         "overland.tsx",
         "overland.tmx",
-        "rules.tmx",
-        "rules.tsx"
+        "Town1.tmx"
     ]
 }

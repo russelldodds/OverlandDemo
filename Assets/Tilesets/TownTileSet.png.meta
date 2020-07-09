@@ -1,0 +1,4241 @@
+fileFormatVersion: 2
+guid: 69cee78f4a03043d88d14eba1044f933
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8849732722839296053
+    second: TownTileSet_0
+  - first:
+      213: 2342834284981463723
+    second: TownTileSet_1
+  - first:
+      213: 2310600843294790171
+    second: TownTileSet_2
+  - first:
+      213: -8624952384867320630
+    second: TownTileSet_3
+  - first:
+      213: -8174846310950555308
+    second: TownTileSet_4
+  - first:
+      213: 6211504840081183583
+    second: TownTileSet_5
+  - first:
+      213: -4359839763308829709
+    second: TownTileSet_6
+  - first:
+      213: -1157700497215442534
+    second: TownTileSet_7
+  - first:
+      213: 1108333096799993801
+    second: TownTileSet_8
+  - first:
+      213: -1668531067646841294
+    second: TownTileSet_9
+  - first:
+      213: 2622860817876187570
+    second: TownTileSet_10
+  - first:
+      213: 965591040733283828
+    second: TownTileSet_11
+  - first:
+      213: -8403852571738352288
+    second: TownTileSet_12
+  - first:
+      213: 3736326482855942642
+    second: TownTileSet_13
+  - first:
+      213: 1326854008190616411
+    second: TownTileSet_14
+  - first:
+      213: 4135777068108378076
+    second: TownTileSet_15
+  - first:
+      213: 4690462471974717115
+    second: TownTileSet_16
+  - first:
+      213: 584380973354871873
+    second: TownTileSet_17
+  - first:
+      213: 8908159313342437543
+    second: TownTileSet_18
+  - first:
+      213: 5903445780076385883
+    second: TownTileSet_19
+  - first:
+      213: 6242040953853558626
+    second: TownTileSet_20
+  - first:
+      213: 7473021234397124819
+    second: TownTileSet_21
+  - first:
+      213: 6226793697879525527
+    second: TownTileSet_22
+  - first:
+      213: 4215632276287311128
+    second: TownTileSet_23
+  - first:
+      213: -7002012943074951920
+    second: TownTileSet_24
+  - first:
+      213: 129490708634794519
+    second: TownTileSet_25
+  - first:
+      213: 8613785035240509618
+    second: TownTileSet_26
+  - first:
+      213: -8108689740004567079
+    second: TownTileSet_27
+  - first:
+      213: 9111995517581407725
+    second: TownTileSet_28
+  - first:
+      213: 3048588734991646612
+    second: TownTileSet_29
+  - first:
+      213: -5980177280629112986
+    second: TownTileSet_30
+  - first:
+      213: -8378437532983164807
+    second: TownTileSet_31
+  - first:
+      213: -774469588118233705
+    second: TownTileSet_32
+  - first:
+      213: -9203425215337320270
+    second: TownTileSet_33
+  - first:
+      213: -4426215299495872600
+    second: TownTileSet_34
+  - first:
+      213: -3353775749981201640
+    second: TownTileSet_35
+  - first:
+      213: -4017799781582670037
+    second: TownTileSet_36
+  - first:
+      213: 2938024244778723065
+    second: TownTileSet_37
+  - first:
+      213: -7366677614818314381
+    second: TownTileSet_38
+  - first:
+      213: 4760611960638432714
+    second: TownTileSet_39
+  - first:
+      213: -3080377458795934656
+    second: TownTileSet_40
+  - first:
+      213: 3390951474558212694
+    second: TownTileSet_41
+  - first:
+      213: 6154015246320551395
+    second: TownTileSet_42
+  - first:
+      213: -2073686777437767040
+    second: TownTileSet_43
+  - first:
+      213: 1713324054191836571
+    second: TownTileSet_44
+  - first:
+      213: 8485364094641651739
+    second: TownTileSet_45
+  - first:
+      213: -5226564096245266479
+    second: TownTileSet_46
+  - first:
+      213: -6872375415388133581
+    second: TownTileSet_47
+  - first:
+      213: -1671570354708851105
+    second: TownTileSet_48
+  - first:
+      213: -1727351447822749418
+    second: TownTileSet_49
+  - first:
+      213: 3610701482072403883
+    second: TownTileSet_50
+  - first:
+      213: 8024589743520534792
+    second: TownTileSet_51
+  - first:
+      213: 7730700772102390973
+    second: TownTileSet_52
+  - first:
+      213: 2508636105553814707
+    second: TownTileSet_53
+  - first:
+      213: 8169328948578711351
+    second: TownTileSet_54
+  - first:
+      213: -8174145280168391523
+    second: TownTileSet_55
+  - first:
+      213: 3417151866981423137
+    second: TownTileSet_56
+  - first:
+      213: -6481714382630665403
+    second: TownTileSet_57
+  - first:
+      213: -5336253189208091000
+    second: TownTileSet_58
+  - first:
+      213: -3503597287863929652
+    second: TownTileSet_59
+  - first:
+      213: -745865408426626093
+    second: TownTileSet_60
+  - first:
+      213: -7426051399292374559
+    second: TownTileSet_61
+  - first:
+      213: -2140407988862232936
+    second: TownTileSet_62
+  - first:
+      213: 3171058461897637394
+    second: TownTileSet_63
+  - first:
+      213: 5639632554779756466
+    second: TownTileSet_64
+  - first:
+      213: 2233552079503358699
+    second: TownTileSet_65
+  - first:
+      213: -7979276989647709513
+    second: TownTileSet_66
+  - first:
+      213: -5089579127336518862
+    second: TownTileSet_67
+  - first:
+      213: -9073232298989866596
+    second: TownTileSet_68
+  - first:
+      213: -8854270100304110693
+    second: TownTileSet_69
+  - first:
+      213: -2243766995295014837
+    second: TownTileSet_70
+  - first:
+      213: 1984825774907633045
+    second: TownTileSet_71
+  - first:
+      213: 6973125731148437852
+    second: TownTileSet_72
+  - first:
+      213: 3209110267331544684
+    second: TownTileSet_73
+  - first:
+      213: -1520517146598535378
+    second: TownTileSet_74
+  - first:
+      213: -2060509894251601809
+    second: TownTileSet_75
+  - first:
+      213: 6768059920906194562
+    second: TownTileSet_76
+  - first:
+      213: 9025598541316719863
+    second: TownTileSet_77
+  - first:
+      213: -5537625536008328646
+    second: TownTileSet_78
+  - first:
+      213: 4793806205811038593
+    second: TownTileSet_79
+  - first:
+      213: -6588906096689899932
+    second: TownTileSet_80
+  - first:
+      213: -5435858896946457455
+    second: TownTileSet_81
+  - first:
+      213: 7622502095043406278
+    second: TownTileSet_82
+  - first:
+      213: 7027041418623649062
+    second: TownTileSet_83
+  - first:
+      213: 7700879115224393459
+    second: TownTileSet_84
+  - first:
+      213: 6811347635921190950
+    second: TownTileSet_85
+  - first:
+      213: -3468777194596139339
+    second: TownTileSet_86
+  - first:
+      213: 8417567938524600801
+    second: TownTileSet_87
+  - first:
+      213: -655667557955594506
+    second: TownTileSet_88
+  - first:
+      213: -1324847243292175907
+    second: TownTileSet_89
+  - first:
+      213: -3328677975579024207
+    second: TownTileSet_90
+  - first:
+      213: -2776050458320486469
+    second: TownTileSet_91
+  - first:
+      213: -7048768235321499743
+    second: TownTileSet_92
+  - first:
+      213: 1966948600516451667
+    second: TownTileSet_93
+  - first:
+      213: -1068092006936942028
+    second: TownTileSet_94
+  - first:
+      213: -6397445195771693384
+    second: TownTileSet_95
+  - first:
+      213: -8212322028627669672
+    second: TownTileSet_96
+  - first:
+      213: 4507995122562725831
+    second: TownTileSet_97
+  - first:
+      213: -9113039286149092562
+    second: TownTileSet_98
+  - first:
+      213: -82698280558040000
+    second: TownTileSet_99
+  - first:
+      213: 832536774894255385
+    second: TownTileSet_100
+  - first:
+      213: 360504123632072962
+    second: TownTileSet_101
+  - first:
+      213: 3110034242848114043
+    second: TownTileSet_102
+  - first:
+      213: -4960655983606836305
+    second: TownTileSet_103
+  - first:
+      213: -9216162701899018433
+    second: TownTileSet_104
+  - first:
+      213: -2565984489703092047
+    second: TownTileSet_105
+  - first:
+      213: 4063672117587186425
+    second: TownTileSet_106
+  - first:
+      213: -6604507604436767446
+    second: TownTileSet_0
+  - first:
+      213: -2891830471521630796
+    second: TownTileSet_1
+  - first:
+      213: -3140676937359413633
+    second: TownTileSet_2
+  - first:
+      213: -5749529542763594788
+    second: TownTileSet_3
+  - first:
+      213: 9130700018463442753
+    second: TownTileSet_4
+  - first:
+      213: -2582231768359847287
+    second: TownTileSet_5
+  - first:
+      213: -748380699629304116
+    second: TownTileSet_6
+  - first:
+      213: -8528963344418093583
+    second: TownTileSet_7
+  - first:
+      213: -5036837676742319622
+    second: TownTileSet_8
+  - first:
+      213: -6417484173502835297
+    second: TownTileSet_9
+  - first:
+      213: 9109140218487809167
+    second: TownTileSet_10
+  - first:
+      213: -6429219828064665545
+    second: TownTileSet_11
+  - first:
+      213: -7433670864613077242
+    second: TownTileSet_12
+  - first:
+      213: 118564355589756981
+    second: TownTileSet_13
+  - first:
+      213: 7718191995714987477
+    second: TownTileSet_14
+  - first:
+      213: -719235374767254004
+    second: TownTileSet_15
+  - first:
+      213: 5877518542202678436
+    second: TownTileSet_16
+  - first:
+      213: -4840899443635024414
+    second: TownTileSet_17
+  - first:
+      213: 5789617903271496281
+    second: TownTileSet_18
+  - first:
+      213: 1587471125911873608
+    second: TownTileSet_19
+  - first:
+      213: 2423997280148972946
+    second: TownTileSet_20
+  - first:
+      213: -9186823136661181953
+    second: TownTileSet_21
+  - first:
+      213: -3195704651819597926
+    second: TownTileSet_22
+  - first:
+      213: -8100099370817333917
+    second: TownTileSet_23
+  - first:
+      213: 1797250677870048953
+    second: TownTileSet_24
+  - first:
+      213: 8648109100363041178
+    second: TownTileSet_25
+  - first:
+      213: 7061789973317232244
+    second: TownTileSet_26
+  - first:
+      213: -3304710772219499009
+    second: TownTileSet_27
+  - first:
+      213: -3591353992545850462
+    second: TownTileSet_28
+  - first:
+      213: -8819359569700085349
+    second: TownTileSet_29
+  - first:
+      213: -9076953698569101243
+    second: TownTileSet_30
+  - first:
+      213: 399402122950278418
+    second: TownTileSet_31
+  - first:
+      213: 6805778017421541541
+    second: TownTileSet_32
+  - first:
+      213: -3186382995919522021
+    second: TownTileSet_33
+  - first:
+      213: 256916418466479667
+    second: TownTileSet_34
+  - first:
+      213: 4564043308895116997
+    second: TownTileSet_35
+  - first:
+      213: 6064814003397754975
+    second: TownTileSet_36
+  - first:
+      213: 5617680392093733783
+    second: TownTileSet_37
+  - first:
+      213: 4444341742151285574
+    second: TownTileSet_38
+  - first:
+      213: 4152639694819530594
+    second: TownTileSet_39
+  - first:
+      213: 8458696750491209375
+    second: TownTileSet_40
+  - first:
+      213: -710483992206423475
+    second: TownTileSet_41
+  - first:
+      213: 8927664443355286597
+    second: TownTileSet_42
+  - first:
+      213: -3632664740186553196
+    second: TownTileSet_43
+  - first:
+      213: -1720021967989219918
+    second: TownTileSet_44
+  - first:
+      213: -8781043440266241486
+    second: TownTileSet_45
+  - first:
+      213: -7583584245967970675
+    second: TownTileSet_46
+  - first:
+      213: -8281546652646482203
+    second: TownTileSet_47
+  - first:
+      213: 5147733025218138495
+    second: TownTileSet_48
+  - first:
+      213: -4221406635108326457
+    second: TownTileSet_49
+  - first:
+      213: -2437188963198446932
+    second: TownTileSet_50
+  - first:
+      213: 1342869193418603286
+    second: TownTileSet_51
+  - first:
+      213: -2787278419550397024
+    second: TownTileSet_52
+  - first:
+      213: 8914412288803744913
+    second: TownTileSet_53
+  - first:
+      213: 7794257646213975526
+    second: TownTileSet_54
+  - first:
+      213: -2341197948160059694
+    second: TownTileSet_55
+  - first:
+      213: -25802504022019513
+    second: TownTileSet_56
+  - first:
+      213: 4664340871683708347
+    second: TownTileSet_57
+  - first:
+      213: -8663047207672591528
+    second: TownTileSet_58
+  - first:
+      213: 30912589431509692
+    second: TownTileSet_59
+  - first:
+      213: 1794485369780893657
+    second: TownTileSet_60
+  - first:
+      213: -7999328832148906778
+    second: TownTileSet_61
+  - first:
+      213: -699355048083161276
+    second: TownTileSet_62
+  - first:
+      213: -3095211945467973289
+    second: TownTileSet_63
+  - first:
+      213: -1740693943039630069
+    second: TownTileSet_64
+  - first:
+      213: -4776101092367393656
+    second: TownTileSet_65
+  - first:
+      213: -6755754539244095848
+    second: TownTileSet_66
+  - first:
+      213: -6581940115073288139
+    second: TownTileSet_67
+  - first:
+      213: 6230787731110106594
+    second: TownTileSet_68
+  - first:
+      213: -3751154027863248623
+    second: TownTileSet_69
+  - first:
+      213: -5631504020313750750
+    second: TownTileSet_70
+  - first:
+      213: -8642142228188799392
+    second: TownTileSet_71
+  - first:
+      213: -8915362129227166780
+    second: TownTileSet_72
+  - first:
+      213: 7998297730074071804
+    second: TownTileSet_73
+  - first:
+      213: 3133998932005451637
+    second: TownTileSet_74
+  - first:
+      213: 966131252868187772
+    second: TownTileSet_75
+  - first:
+      213: 7126510427773267937
+    second: TownTileSet_76
+  - first:
+      213: 1401198114671329987
+    second: TownTileSet_77
+  - first:
+      213: -3245399295999245124
+    second: TownTileSet_78
+  - first:
+      213: -8074275915039114504
+    second: TownTileSet_79
+  - first:
+      213: -6356245469705539850
+    second: TownTileSet_80
+  - first:
+      213: 2503594899056242182
+    second: TownTileSet_81
+  - first:
+      213: 7599479846273098607
+    second: TownTileSet_82
+  - first:
+      213: -8037522298436905036
+    second: TownTileSet_83
+  - first:
+      213: 2168011622316846165
+    second: TownTileSet_84
+  - first:
+      213: -7093025439139296185
+    second: TownTileSet_85
+  - first:
+      213: 4189433979404338357
+    second: TownTileSet_86
+  - first:
+      213: 8301378631806818417
+    second: TownTileSet_87
+  - first:
+      213: 7939661514411393098
+    second: TownTileSet_88
+  - first:
+      213: -4926071947925215592
+    second: TownTileSet_89
+  - first:
+      213: 6573815998390826724
+    second: TownTileSet_90
+  - first:
+      213: -2505063277781756210
+    second: TownTileSet_91
+  - first:
+      213: 2297792396566274155
+    second: TownTileSet_92
+  - first:
+      213: 7685790440513457789
+    second: TownTileSet_93
+  - first:
+      213: 628114677778348944
+    second: TownTileSet_94
+  - first:
+      213: -2101160061635097538
+    second: TownTileSet_95
+  - first:
+      213: -2612457387457359960
+    second: TownTileSet_96
+  - first:
+      213: 143742350915595727
+    second: TownTileSet_97
+  - first:
+      213: -739968373623492347
+    second: TownTileSet_98
+  - first:
+      213: -3524360765775418342
+    second: TownTileSet_99
+  - first:
+      213: 5538130728869913600
+    second: TownTileSet_100
+  - first:
+      213: 612175928441738939
+    second: TownTileSet_101
+  - first:
+      213: -3902833227587644125
+    second: TownTileSet_102
+  - first:
+      213: -7799350939109434327
+    second: TownTileSet_103
+  - first:
+      213: 8739166368680943780
+    second: TownTileSet_104
+  - first:
+      213: 3260456686440063294
+    second: TownTileSet_105
+  - first:
+      213: 8338021919151098793
+    second: TownTileSet_106
+  - first:
+      213: -3306882597229373866
+    second: TownTileSet_107
+  - first:
+      213: -5076079189816324228
+    second: TownTileSet_108
+  - first:
+      213: -3140141822972978481
+    second: TownTileSet_109
+  - first:
+      213: 7689113575857278023
+    second: TownTileSet_110
+  - first:
+      213: 4968992076463459436
+    second: TownTileSet_111
+  - first:
+      213: -3969979735615433441
+    second: TownTileSet_112
+  - first:
+      213: 1078437920243324578
+    second: TownTileSet_113
+  - first:
+      213: -1161505603164987613
+    second: TownTileSet_114
+  - first:
+      213: -6955823812993115791
+    second: TownTileSet_115
+  - first:
+      213: -8554610653435222504
+    second: TownTileSet_116
+  - first:
+      213: 7636845193695338315
+    second: TownTileSet_117
+  - first:
+      213: -1824615924338059291
+    second: TownTileSet_118
+  - first:
+      213: -4420866896832746448
+    second: TownTileSet_119
+  - first:
+      213: -137714030003848077
+    second: TownTileSet_120
+  - first:
+      213: 6712114330980896976
+    second: TownTileSet_121
+  - first:
+      213: -8249167415124971682
+    second: TownTileSet_122
+  - first:
+      213: 7028904223042301163
+    second: TownTileSet_123
+  - first:
+      213: 6001677220218024355
+    second: TownTileSet_124
+  - first:
+      213: -2900459533520999743
+    second: TownTileSet_125
+  - first:
+      213: -177578628589153922
+    second: TownTileSet_126
+  - first:
+      213: 3933528700873751873
+    second: TownTileSet_127
+  - first:
+      213: 5024932261770178301
+    second: TownTileSet_128
+  - first:
+      213: 4797961062468563933
+    second: TownTileSet_129
+  - first:
+      213: -46979015295702426
+    second: TownTileSet_130
+  - first:
+      213: -5341819309968949528
+    second: TownTileSet_131
+  - first:
+      213: -6455392273992012237
+    second: TownTileSet_132
+  - first:
+      213: 6817103168571127865
+    second: TownTileSet_133
+  - first:
+      213: 1379208132343400244
+    second: TownTileSet_134
+  - first:
+      213: 4316913309276906942
+    second: TownTileSet_135
+  - first:
+      213: 3464030794314645105
+    second: TownTileSet_136
+  - first:
+      213: 7366770915088648953
+    second: TownTileSet_137
+  - first:
+      213: -1364171267212165022
+    second: TownTileSet_138
+  - first:
+      213: -4418677666437916071
+    second: TownTileSet_139
+  - first:
+      213: 285658557051738808
+    second: TownTileSet_140
+  - first:
+      213: -4534227961056247133
+    second: TownTileSet_141
+  - first:
+      213: 4370880401838125993
+    second: TownTileSet_142
+  - first:
+      213: 7880550099329465143
+    second: TownTileSet_143
+  - first:
+      213: -7640405875967902753
+    second: TownTileSet_144
+  - first:
+      213: 7171430441964738139
+    second: TownTileSet_145
+  - first:
+      213: 9149451612049117306
+    second: TownTileSet_146
+  - first:
+      213: -4716548903146977508
+    second: TownTileSet_147
+  - first:
+      213: 1964010419779467161
+    second: TownTileSet_148
+  - first:
+      213: -3448530176774111321
+    second: TownTileSet_149
+  - first:
+      213: 8978458275092361820
+    second: TownTileSet_150
+  - first:
+      213: 1627506740462538200
+    second: TownTileSet_151
+  - first:
+      213: 7880063434021059352
+    second: TownTileSet_152
+  - first:
+      213: -6590824508513900586
+    second: TownTileSet_153
+  - first:
+      213: 3304441021859025378
+    second: TownTileSet_154
+  - first:
+      213: 1878312210803356822
+    second: TownTileSet_155
+  - first:
+      213: -5731645849015589310
+    second: TownTileSet_156
+  - first:
+      213: 7628170766775753919
+    second: TownTileSet_157
+  - first:
+      213: -4361729329153417105
+    second: TownTileSet_158
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TownTileSet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4063
+        width: 256
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d2e2173531854a0800000000000000
+      internalID: -6604507604436767446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4039
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b58d4af1872ed7d0800000000000000
+      internalID: -2891830471521630796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_2
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 4049
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e2e6a27f21a64d0800000000000000
+      internalID: -3140676937359413633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_3
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 4038
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb36f9d7519530b0800000000000000
+      internalID: -5749529542763594788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 4050
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1478a2f4a43c6be70800000000000000
+      internalID: 9130700018463442753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_5
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 4037
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98abe2f43e11a2cd0800000000000000
+      internalID: -2582231768359847287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_6
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 4038
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc646d108b73d95f0800000000000000
+      internalID: -748380699629304116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_7
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 4036
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5c1a1d60903a980800000000000000
+      internalID: -8528963344418093583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_8
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 4037
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1687eb1de891ab0800000000000000
+      internalID: -5036837676742319622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 4038
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f951cae352480f6a0800000000000000
+      internalID: -6417484173502835297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_10
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 4039
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84a03434ca2a6e70800000000000000
+      internalID: 9109140218487809167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3519
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730ce4d31a2d6c6a0800000000000000
+      internalID: -6429219828064665545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_12
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 3490
+        width: 16
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f0191ebbb46d890800000000000000
+      internalID: -7433670864613077242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_13
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 3490
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53853f937a935a100800000000000000
+      internalID: 118564355589756981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_14
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 3296
+        width: 97
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5ead43ab68c1b60800000000000000
+      internalID: 7718191995714987477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3490
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c065a11cc33c406f0800000000000000
+      internalID: -719235374767254004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_16
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 3490
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac23c449f3219150800000000000000
+      internalID: 5877518542202678436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3427
+        width: 32
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed8fbcaa9ba1dcb0800000000000000
+      internalID: -4840899443635024414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_18
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 3427
+        width: 14
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a4dbdeecad85050800000000000000
+      internalID: 5789617903271496281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_19
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 3427
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848aa270494d70610800000000000000
+      internalID: 1587471125911873608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_20
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 3458
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295eac3fea4c3a120800000000000000
+      internalID: 2423997280148972946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_21
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 3427
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff968f4f709d18080800000000000000
+      internalID: -9186823136661181953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_22
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 3391
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9fba3dfc8396a3d0800000000000000
+      internalID: -3195704651819597926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_23
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 3362
+        width: 17
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3655115d98aa69f80800000000000000
+      internalID: -8100099370817333917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_24
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 3362
+        width: 51
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b636c228fd11f810800000000000000
+      internalID: 1797250677870048953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_25
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 3395
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9946f93861440870800000000000000
+      internalID: 8648109100363041178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3362
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4762df5d094800260800000000000000
+      internalID: 7061789973317232244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_27
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 3362
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd2370df0f4322d0800000000000000
+      internalID: -3304710772219499009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1887
+        width: 256
+        height: 1470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2abaf935292f82ec0800000000000000
+      internalID: -3591353992545850462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3302
+        width: 65
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91a595c2375b9580800000000000000
+      internalID: -8819359569700085349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_30
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 3328
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540ee12f3be280280800000000000000
+      internalID: -9076953698569101243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_31
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 3330
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21dfcfc5d16fa8500800000000000000
+      internalID: 399402122950278418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_32
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1844
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0c29c5c0bf27e50800000000000000
+      internalID: 6805778017421541541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_33
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1844
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b173fd12c81b7c3d0800000000000000
+      internalID: -3186382995919522021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_34
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1844
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ef8a31f10c09300800000000000000
+      internalID: 256916418466479667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_35
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1843
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce1136453db65f30800000000000000
+      internalID: 4564043308895116997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1842
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50865d043c8a2450800000000000000
+      internalID: 6064814003397754975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_37
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1842
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7939c688d8206fd40800000000000000
+      internalID: 5617680392093733783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_38
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 1842
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b3e5174497dad30800000000000000
+      internalID: 4444341742151285574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_39
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1842
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26797e10dc321a930800000000000000
+      internalID: 4152639694819530594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_40
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1795
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e87c3e0e3536570800000000000000
+      internalID: 8458696750491209375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_41
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1797
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a4fe9c29ad326f0800000000000000
+      internalID: -710483992206423475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_42
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1795
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54cc31ca28f65eb70800000000000000
+      internalID: 8927664443355286597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_43
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1763
+        width: 26
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494081d5aae269dc0800000000000000
+      internalID: -3632664740186553196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_44
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1763
+        width: 26
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd522812214128e0800000000000000
+      internalID: -1720021967989219918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_45
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1779
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a18a9d387732680800000000000000
+      internalID: -8781043440266241486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_46
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1794
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e94dece42b1c690800000000000000
+      internalID: -7583584245967970675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_47
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 1794
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee5e2a6239021d80800000000000000
+      internalID: -8281546652646482203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_48
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1763
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f719cae99eb607740800000000000000
+      internalID: 5147733025218138495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_49
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1764
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c324e5080d8a65c0800000000000000
+      internalID: -4221406635108326457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_50
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1763
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2dd0efc8d5d2ed0800000000000000
+      internalID: -2437188963198446932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_51
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1718
+        width: 28
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61bf785aa64d2a210800000000000000
+      internalID: 1342869193418603286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_52
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1718
+        width: 29
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad16988b099159d0800000000000000
+      internalID: -2787278419550397024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_53
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1714
+        width: 57
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c268ffeba56bb70800000000000000
+      internalID: 8914412288803744913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_54
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1715
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6edc4729804ca2c60800000000000000
+      internalID: 7794257646213975526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_55
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1715
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6db0fced4628fd0800000000000000
+      internalID: -2341197948160059694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_56
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1714
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742b37162c454aff0800000000000000
+      internalID: -25802504022019513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_57
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1714
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb51b006f411bb040800000000000000
+      internalID: 4664340871683708347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 898
+        width: 256
+        height: 799
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b4c32a67ca6c780800000000000000
+      internalID: -8663047207672591528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_59
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 870
+        width: 85
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2172816d2dd6000800000000000000
+      internalID: 30912589431509692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_60
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 833
+        width: 94
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7fc6cafea47e810800000000000000
+      internalID: 1794485369780893657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_61
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 768
+        width: 159
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec59363fccacf090800000000000000
+      internalID: -7999328832148906778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_62
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 736
+        width: 31
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f70230a446b46f0800000000000000
+      internalID: -699355048083161276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_63
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 768
+        width: 32
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751f5dd72299b05d0800000000000000
+      internalID: -3095211945467973289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_64
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 768
+        width: 31
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05e276d410d7d7e0800000000000000
+      internalID: -1740693943039630069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_65
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 768
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c16128c51e7bdb0800000000000000
+      internalID: -4776101092367393656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_66
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 737
+        width: 96
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8967f924a0dbe32a0800000000000000
+      internalID: -6755754539244095848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_67
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 737
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538b924865048a4a0800000000000000
+      internalID: -6581940115073288139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_68
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 737
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e51ea7ed64387650800000000000000
+      internalID: 6230787731110106594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_69
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 737
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1117f6f394931fbc0800000000000000
+      internalID: -3751154027863248623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_70
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 737
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223c3063ee0e8d1b0800000000000000
+      internalID: -5631504020313750750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_71
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 546
+        width: 63
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e57667e61f01880800000000000000
+      internalID: -8642142228188799392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_72
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 449
+        width: 191
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cbc17b0165464480800000000000000
+      internalID: -8915362129227166780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_73
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 449
+        width: 97
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2d0e0a869affe60800000000000000
+      internalID: 7998297730074071804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_74
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 428
+        width: 60
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57773ac8c633e7b20800000000000000
+      internalID: 3133998932005451637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_75
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 428
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c768c957143686d00800000000000000
+      internalID: 966131252868187772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_76
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 428
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1efea87e97376e260800000000000000
+      internalID: 7126510427773267937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_77
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 428
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c28eece24e027310800000000000000
+      internalID: 1401198114671329987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_78
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 428
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb489aff88606f2d0800000000000000
+      internalID: -3245399295999245124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_79
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 428
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8faf999a5d862ff80800000000000000
+      internalID: -8074275915039114504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_80
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 428
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fee3011c641ac7a0800000000000000
+      internalID: -6356245469705539850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_81
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 396
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e2abbcb4e8eb220800000000000000
+      internalID: 2503594899056242182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_82
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 396
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6329da08a6c67960800000000000000
+      internalID: 7599479846273098607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_83
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 396
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7136fdd0cf47090800000000000000
+      internalID: -8037522298436905036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_84
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 396
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c2d197513561e10800000000000000
+      internalID: 2168011622316846165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_85
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 396
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c0b4d81f2809d90800000000000000
+      internalID: -7093025439139296185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_86
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 396
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4c858f10cd32a30800000000000000
+      internalID: 4189433979404338357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_87
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 396
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1781dde02eb643370800000000000000
+      internalID: 8301378631806818417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_88
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 397
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40c45bc4185f2e60800000000000000
+      internalID: 7939661514411393098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_89
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 369
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896a6eda9a313abb0800000000000000
+      internalID: -4926071947925215592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_90
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 369
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e67dda22d2ea3b50800000000000000
+      internalID: 6573815998390826724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_91
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 370
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec651f3a83a3c3dd0800000000000000
+      internalID: -2505063277781756210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_92
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 364
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b602deca20663ef10800000000000000
+      internalID: 2297792396566274155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_93
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 366
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ec5e04fa969aa60800000000000000
+      internalID: 7685790440513457789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_94
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 366
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bff27b8f287b800800000000000000
+      internalID: 628114677778348944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_95
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 367
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c800e6e0e27d2e0800000000000000
+      internalID: -2101160061635097538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_96
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 363
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af42c5f8dfaebbd0800000000000000
+      internalID: -2612457387457359960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_97
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 354
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcde08518ecaef100800000000000000
+      internalID: 143742350915595727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_98
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 334
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501f5294faa1bb5f0800000000000000
+      internalID: -739968373623492347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_99
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 336
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ce1af6e84f61fc0800000000000000
+      internalID: -3524360765775418342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_100
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 332
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00467fd3e846bdc40800000000000000
+      internalID: 5538130728869913600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_101
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 335
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb690d273c2ee7800800000000000000
+      internalID: 612175928441738939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_102
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 331
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3251c0c8bd956d9c0800000000000000
+      internalID: -3902833227587644125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_103
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 332
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92cd5c3c4a323c390800000000000000
+      internalID: -7799350939109434327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_104
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 331
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0a44e9281c74970800000000000000
+      internalID: 8739166368680943780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_105
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 331
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31aec8e4187f3d20800000000000000
+      internalID: 3260456686440063294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_106
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 301
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab0c6c32ca96b370800000000000000
+      internalID: 8338021919151098793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_107
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 302
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656d8366cc79b12d0800000000000000
+      internalID: -3306882597229373866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_108
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 302
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fce3ffed42e89b0800000000000000
+      internalID: -5076079189816324228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_109
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 299
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca195136a9fb64d0800000000000000
+      internalID: -3140141822972978481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_110
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 288
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c4b9efe0835ba60800000000000000
+      internalID: 7689113575857278023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_111
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 268
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cc55977f765f440800000000000000
+      internalID: 4968992076463459436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_112
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 268
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15942dd67cc7e8c0800000000000000
+      internalID: -3969979735615433441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_113
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 268
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a61a6c139167fe00800000000000000
+      internalID: 1078437920243324578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_114
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 236
+        width: 27
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f99becec081efe0800000000000000
+      internalID: -1161505603164987613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_115
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 236
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179975a7813f77f90800000000000000
+      internalID: -6955823812993115791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_116
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 268
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816a83a5feae74980800000000000000
+      internalID: -8554610653435222504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_117
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 268
+        width: 65
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f1cdeed368bf960800000000000000
+      internalID: 7636845193695338315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_118
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 236
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e71f4aeb79ada6e0800000000000000
+      internalID: -1824615924338059291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_119
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 236
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c2007eafce5a2c0800000000000000
+      internalID: -4420866896832746448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_120
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 236
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c7801c1ddb61ef0800000000000000
+      internalID: -137714030003848077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_121
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 237
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d0dce5fb68362d50800000000000000
+      internalID: 6712114330980896976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_122
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 234
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5fafb021f1158d80800000000000000
+      internalID: -8249167415124971682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_123
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 234
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: becedae662fab8160800000000000000
+      internalID: 7028904223042301163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_124
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 206
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a136af22ad3a4350800000000000000
+      internalID: 6001677220218024355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_125
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 207
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cae51beb6f7fb7d0800000000000000
+      internalID: -2900459533520999743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_126
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 206
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e711e3b9d2d198df0800000000000000
+      internalID: -177578628589153922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_127
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 196
+        width: 58
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d32614383b69630800000000000000
+      internalID: 3933528700873751873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_128
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 172
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe2633d4452cb540800000000000000
+      internalID: 5024932261770178301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_129
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 177
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd338966a28c59240800000000000000
+      internalID: 4797961062468563933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_130
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 177
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ae661a5d8195ff0800000000000000
+      internalID: -46979015295702426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_131
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 177
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee7af6c3ab0ed5b0800000000000000
+      internalID: -5341819309968949528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_132
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 169
+        width: 51
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ea7eecde6d966a0800000000000000
+      internalID: -6455392273992012237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_133
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9383fd796373b9e50800000000000000
+      internalID: 6817103168571127865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_134
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 141
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43788af2d7ee32310800000000000000
+      internalID: 1379208132343400244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_135
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 140
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb52b9568c1c8eb30800000000000000
+      internalID: 4316913309276906942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_136
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 129
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e732a77a5b21030800000000000000
+      internalID: 3464030794314645105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_137
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 129
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fac98fcd170c3660800000000000000
+      internalID: 7366770915088648953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_138
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 129
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 260460dc57d711de0800000000000000
+      internalID: -1364171267212165022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_139
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 100
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a1403d214bda2c0800000000000000
+      internalID: -4418677666437916071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_140
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 131
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba9e14b1fcd6f300800000000000000
+      internalID: 285658557051738808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_141
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 64
+        width: 29
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a2499a51bf2311c0800000000000000
+      internalID: -4534227961056247133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_142
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 64
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3374b419c78ac30800000000000000
+      internalID: 4370880401838125993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_143
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 64
+        width: 27
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73bb339ff865d5d60800000000000000
+      internalID: 7880550099329465143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_144
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 64
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb302f1653d7f590800000000000000
+      internalID: -7640405875967902753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_145
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 64
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b561bb8bdf9068360800000000000000
+      internalID: 7171430441964738139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_146
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 64
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7010d9e3c169fe70800000000000000
+      internalID: 9149451612049117306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_147
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 97
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c178a2e03c37b8eb0800000000000000
+      internalID: -4716548903146977508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_148
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 65
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997fe1e2211914b10800000000000000
+      internalID: 1964010419779467161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_149
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 65
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aff928431c5420d0800000000000000
+      internalID: -3448530176774111321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_150
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 129
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52fb853b34e99c70800000000000000
+      internalID: 8978458275092361820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_151
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 45
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ddc2dee1c0169610800000000000000
+      internalID: 1627506740462538200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_152
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 47
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81bbe5061fb9b5d60800000000000000
+      internalID: 7880063434021059352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_153
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 46
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d727197700b884a0800000000000000
+      internalID: -6590824508513900586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_154
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 48
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1d2290a9bbbdd20800000000000000
+      internalID: 3304441021859025378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_155
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6947636010b111a10800000000000000
+      internalID: 1878312210803356822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_156
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 10
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2466517c77a1570b0800000000000000
+      internalID: -5731645849015589310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_157
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 9
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc10b785e4bcd960800000000000000
+      internalID: 7628170766775753919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownTileSet_158
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 9
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f606869d8460873c0800000000000000
+      internalID: -4361729329153417105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
