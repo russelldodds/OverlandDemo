@@ -1,0 +1,58 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "/Users/russell.dodds/Documents/Personal/Unity/OverlandDemo/Assets/Tilesets/TownCastleTileSet.tsx": {
+            "scaleInDock": 1
+        },
+        "Castle1.tmx": {
+            "scale": 0.43,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 182.5581395348836,
+                "y": 974.4186046511629
+            }
+        },
+        "SmallWorld.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1977.5,
+                "y": 686
+            }
+        },
+        "Tower1.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 999.5,
+                "y": 1550
+            }
+        },
+        "World.tmx": {
+            "scale": 0.109130859375,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 4082.2550335570477,
+                "y": 4086.836689038031
+            }
+        }
+    },
+    "map.height": 128,
+    "map.lastUsedFormat": "tmx",
+    "map.layerDataFormat": null,
+    "map.width": 128,
+    "openFiles": [
+    ],
+    "project": "TiledProject.tiled-project",
+    "property.type": "int",
+    "recentFiles": [
+        "World.tmx"
+    ]
+}

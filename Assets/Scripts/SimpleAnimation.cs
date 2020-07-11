@@ -38,21 +38,27 @@ public class SimpleAnimation : MonoBehaviour {
             isMoving = true;
             Vector3 vec = movePoint.position - transform.parent.position;
             vec.Normalize();
-            if (vec == Vector3.right) {
-                currentDirection = Direction.RIGHT;
-            } else if (vec == Vector3.left) {
-                currentDirection = Direction.LEFT;                              
-            } else if (vec == Vector3.up) {
-                currentDirection = Direction.UP;
-            } else {
-                currentDirection = Direction.DOWN;
-            }  
+            
             //Debug.Log("Vector: " + vec + ", currentDirection: " + currentDirection); 
-            FaceDirection(currentDirection);      
             StopAllCoroutines();
+            FaceDirection(vec);      
             StartCoroutine(Animate());
         }
     }
+
+    public void FaceDirection(Vector3 vec) {
+        if (vec == Vector3.right) {
+            currentDirection = Direction.RIGHT;
+        } else if (vec == Vector3.left) {
+            currentDirection = Direction.LEFT;                              
+        } else if (vec == Vector3.up) {
+            currentDirection = Direction.UP;
+        } else {
+            currentDirection = Direction.DOWN;
+        }
+        FaceDirection(currentDirection);
+    }
+
     public void FaceDirection(Direction direction) {
         if (!isMoving && spriteRenderer != null) {
             currentDirection = direction;

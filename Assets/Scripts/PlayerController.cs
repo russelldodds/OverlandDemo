@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour, IDataSerialiizer {
 
     public MovementHandler movementHandler;
 
-    public TileType[] allowedTiles;
+    public List<TileType> allowedTiles;
 
     public float speed = 5f;
 
@@ -27,9 +29,13 @@ public class PlayerController : MonoBehaviour, IDataSerialiizer {
                 targetLocation = movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
             } 
 
-            //Debug.Log("Playeer pos: " + transform.position + ", Target pos: " + targetLocation);
-            if (targetLocation != Vector3.forward && movementHandler.ValidateMove(targetLocation, true, allowedTiles)) {
-                movePoint.position = targetLocation;  
+            if (targetLocation != Vector3.forward) {
+                Vector3 vec = movePoint.position - transform.position;
+                vec.Normalize();
+                GetComponentInChildren<SimpleAnimation>().FaceDirection(vec);
+                if (movementHandler.ValidateMove(targetLocation, true, allowedTiles)) {                
+                    movePoint.position = targetLocation; 
+                } 
             }
         }
     }
@@ -37,8 +43,8 @@ public class PlayerController : MonoBehaviour, IDataSerialiizer {
     public void Save() {
         PlayerPrefsX.SetVector3("playerPosition", transform.position);
 
-        string [] strAllowedTiles = new string[allowedTiles.Length];
-        for (int i = 0; i < allowedTiles.Length; i++) {
+        string [] strAllowedTiles = new string[allowedTiles.Count];
+        for (int i = 0; i < allowedTiles.Count; i++) {
             strAllowedTiles[i] = allowedTiles[i].ToString();
         }
         PlayerPrefsX.SetStringArray("playerTiles", strAllowedTiles);
@@ -55,9 +61,9 @@ public class PlayerController : MonoBehaviour, IDataSerialiizer {
         }
         string [] strAllowedTiles = PlayerPrefsX.GetStringArray("playerTiles");
         if (strAllowedTiles != null) {
-            allowedTiles = new TileType[strAllowedTiles.Length];
-            for (int i = 0; i < allowedTiles.Length; i++) {
-                allowedTiles[i] = (TileType)System.Enum.Parse(typeof(TileType), strAllowedTiles[i]);
+            allowedTiles = new List<TileType>();
+            for (int i = 0; i < allowedTiles.Count; i++) {
+                allowedTiles.Add( (TileType)System.Enum.Parse(typeof(TileType), strAllowedTiles[i]));
             }
         }
 

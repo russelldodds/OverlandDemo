@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoccationHandler : MonoBehaviour
 {
-    public SuperTiled2Unity.SuperMap map;
-
+    
     public PlayerController playerController;
 
     public SaveLoadHandler saveLoadHandler;
@@ -15,24 +14,26 @@ public class LoccationHandler : MonoBehaviour
 
     public MovementHandler movementHandler;
 
+    public List<SuperTiled2Unity.SuperMap> locationPrefabs;
+
+    private SuperTiled2Unity.SuperMap map;
+
     void Start() {
         string locationName = PlayerPrefs.GetString("locationName", "Castle1");
-        foreach (Transform location in transform) {
-            if (location.name.Equals(locationName)) {
-                location.gameObject.SetActive(true);
-                map = location.GetComponent<SuperTiled2Unity.SuperMap>();
+        
+        foreach (SuperTiled2Unity.SuperMap prefab in locationPrefabs) {
+            if (prefab.name.Equals(locationName)) {
+                map = Instantiate<SuperTiled2Unity.SuperMap>(prefab, Vector3.zero, Quaternion.identity);
                 movementHandler.grid = map.GetComponentInChildren<Grid>();
                 break;
-            } else {
-                location.gameObject.SetActive(false);
-;            }
+            } 
         }
         saveLoadHandler.Load();        
     }
 
     // Update is called once per frame
     void Update() {
-        if (playerController != null && 
+        if (playerController != null && map != null && 
                 (playerController.transform.position.x <= 0 || 
                 playerController.transform.position.x >= map.m_Width - 1 ||
                 playerController.transform.position.y >= 0 || 

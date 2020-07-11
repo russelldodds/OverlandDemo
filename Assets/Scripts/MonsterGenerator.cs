@@ -10,7 +10,7 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
 
     public PlayerController playerController;
 
-    public GameObject[] monsterPrefabs;
+    public List<GameObject> monsterPrefabs;
 
     public MovementHandler movementHandler;
 
@@ -23,7 +23,7 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
     }
 
     private void GenerateRandomMonster() {
-        int monsterType = Random.Range(0, 1000 * monsterPrefabs.Length) % monsterPrefabs.Length;
+        int monsterType = Random.Range(0, 1000 * monsterPrefabs.Count) % monsterPrefabs.Count;
         
         GameObject monsterPrefab = monsterPrefabs[monsterType];
         MonsterMover mover = monsterPrefab.GetComponent<MonsterMover>();
@@ -48,7 +48,7 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
         mover.monsterType = monsterType;
     }
 
-    private Vector3 GetValidTile(TileType[] allowedTiles) {
+    private Vector3 GetValidTile(List<TileType> allowedTiles) {
         int randX = Random.Range(0, map.m_Width);
         int randY = Random.Range(0, map.m_Height);
         Vector3 targetLocation  = new Vector3(randX, -randY, 0);

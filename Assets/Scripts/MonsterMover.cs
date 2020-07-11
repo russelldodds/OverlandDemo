@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MonsterMover : MonoBehaviour {
 
@@ -13,7 +14,7 @@ public class MonsterMover : MonoBehaviour {
 
     public Transform movePoint;
 
-    public TileType[] allowedTiles;
+    public List<TileType> allowedTiles;
 
     public MovementHandler movementHandler;
 
@@ -36,6 +37,7 @@ public class MonsterMover : MonoBehaviour {
             isMoving = false;
             Debug.Log("**********************  FIGHT  **********************");
             StopAllCoroutines();
+            KillMonster();
         } else if (!isMoving && Vector3.Distance(transform.position, player.position) > 2f) {
             isMoving = true;
             StartCoroutine(HandleMove()); 
@@ -95,5 +97,10 @@ public class MonsterMover : MonoBehaviour {
         //Debug.Log("Target: " + movePoint.position + ", delay: " + delay);                      
         yield return new WaitForSeconds(delay);
         StartCoroutine(HandleMove());
+    }
+
+    private void KillMonster() {
+        Destroy(movePoint.gameObject);
+        Destroy(gameObject);
     }
 }

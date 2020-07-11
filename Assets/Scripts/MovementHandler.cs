@@ -7,18 +7,26 @@ using UnityEngine.SceneManagement;
 
 public class MovementHandler : MonoBehaviour {
 
-    private class Rules {
-        public int cost;
-        public TileType tileType;
+    // protected static MovementHandler _instance = null;
 
-        public override string ToString() {
-            return "cost: " + cost + ", tileType: " + tileType;
-        }
-    }
+    // public static MovementHandler Instance {
+    //     get {
+    //         if (_instance == null) { _instance = FindObjectOfType<MovementHandler>(); }
+    //         return _instance;
+    //     }
+    //     protected set { _instance = value; }
+    // }
 
+    // protected virtual void Awake() {
+    //     if (Instance == null) {
+    //         Instance = this;
+    //     } else if (Instance != this) {
+    //         DestroyImmediate(this);
+    //         return;
+    //     }
+    // }
+   
     public PlayerController playerController;
-
-    public Grid grid;
 
     public Transform locationParent; 
 
@@ -30,7 +38,7 @@ public class MovementHandler : MonoBehaviour {
 
     private List<GameObject> locations = new List<GameObject>();
 
-    private Dictionary<string, Rules> rules = new Dictionary<string, Rules>();
+    public Grid grid;
 
     // Start is called before the first frame update
     void Start() {
@@ -44,98 +52,63 @@ public class MovementHandler : MonoBehaviour {
             }
         }
         //Debug.Log("Locations: " + locations.Count);
-        StartCoroutine(LoadLRules());
     }
 
-    public bool ValidateMove(Vector3 targetLocation, bool isPlayer, TileType[] tileTypes) {
+    public bool ValidateMove(Vector3 targetLocation, bool isPlayer, List<TileType> tileTypes) {
         // can be null as it loads
-        if (grid == null || rules == null) {
+        if (grid == null) {
             return false;
         }
 
         Vector3Int tilePos = grid.WorldToCell(targetLocation); 
         //Debug.Log("***************************************************");
         //Debug.Log("targetLoc: " + targetLocation + " targetCell: " + tilePos + " count: " + grid.transform.childCount);
-        
         for (int i = 0; i < grid.transform.childCount; i++) {
             GameObject child = grid.transform.GetChild(i).gameObject;
-           
-            Rules rule;
-            rules.TryGetValue(child.name, out rule);
-            if (rule != null) {
-                Tilemap tilemap = child.GetComponent<Tilemap>();   
-                //Debug.Log("tilemap: " + tilemap.name + ", rule: " + rule);
-
-                TileBase tile = tilemap.GetTile(tilePos);
-                if (tile != null) {
-                    //Debug.Log("Tile matched");
-                    if (IsAllowedTile(rule.tileType, tileTypes)) {
-                        if (isPlayer) {
-                            if (rule.tileType == TileType.LOCATION) {
-                                foreach (GameObject location in locations) {
-                                    if (Vector3.Distance(location.transform.position, targetLocation) <= 0.05f) {
-                                        //Debug.Log("Enter location: " + location.name);
-                                        saveLoadHandler.Save();
-                                        StartCoroutine(LoadLocationScene(location.name));
-                                        return true;
-                                    }
+            Tilemap tilemap = child.GetComponent<Tilemap>();   
+            //Debug.Log("tilemap: " + tilemap.name + ", rule: " + rule);
+            SuperTile tile = tilemap.GetTile<SuperTile>(tilePos);
+            if (tile != null) {
+                GridTile gridTile = getTileProperties(tile);
+                //Debug.Log("Tile matched");
+                if (gridTile.cost >= 0) {
+                    if (isPlayer) {
+                        if (gridTile.tileType == TileType.LOCATION) {
+                            foreach (GameObject location in locations) {
+                                if (Vector3.Distance(location.transform.position, targetLocation) <= 0.05f) {
+                                    //Debug.Log("Enter location: " + location.name);
+                                    saveLoadHandler.Save();
+                                    StartCoroutine(LoadLocationScene(location.name));
+                                    return true;
                                 }
-                                return false;
-                            } else {
-                                questHandler.IncrementTime(rule.cost);
-                                return true;
                             }
+                            return false;
                         } else {
+                            questHandler.IncrementTime(gridTile.cost);
                             return true;
-                        }                       
+                        }
                     } else {
-                        // only allow the first rule to be processed
-                        return false;
-                    }
+                        return true;
+                    }                       
+                } else {
+                    // only allow the first rule to be processed
+                    return false;
                 }
             }
         }
         return false;
     }
 
-    private bool IsAllowedTile(TileType tileType, TileType[] tileTypes) {
-        foreach (TileType checkTile in tileTypes) {
-            if (checkTile == tileType) {
-                return true;
+    private GridTile getTileProperties(SuperTile tile) {
+        GridTile gridTile = new GridTile();
+        foreach (CustomProperty prop in tile.m_CustomProperties) {
+            if (prop.m_Name == "cost") {
+                gridTile.cost = prop.GetValueAsInt();
+            } else if (prop.m_Name == "tileType") {
+                gridTile.tileType = prop.GetValueAsEnum<TileType>();
             }
         }
-        return false;
-    } 
-
-    IEnumerator LoadLRules() {
-        while (grid == null) {
-            yield return new WaitForEndOfFrame();
-        }
-
-        for (int i = 0; i < grid.transform.childCount; i++) {
-            Rules rule = new Rules();
-            GameObject child = grid.transform.GetChild(i).gameObject;
-            SuperCustomProperties props = child.GetComponent<SuperCustomProperties>();
-
-            CustomProperty propCost;
-            props.TryGetCustomProperty("cost", out propCost);
-            if (propCost != null) {
-                rule.cost = propCost.GetValueAsInt();
-            } else {
-                rule.cost = 0;
-            }
-
-            CustomProperty propRequired;
-            props.TryGetCustomProperty("tileType", out propRequired);
-            if (propRequired != null) {
-                rule.tileType = propRequired.GetValueAsEnum<TileType>();
-            } else {
-                rule.tileType = TileType.BASE;
-            }         
-
-            rules.Add(child.name, rule);
-            //Debug.Log("tilemap: " + child.name + ", rule: " + rule);
-        }
+        return gridTile;
     }
     
     IEnumerator LoadLocationScene(string locationName) {
