@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour, IDataSerialiizer {
     void Update() {
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, speed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, movePoint.position) <= 0.05f) {            
+        if (Vector3.Distance(transform.position, movePoint.position) <= 0.01f) {            
             Vector3 targetLocation = Vector3.forward;
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f) {
                 targetLocation = movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f); 
@@ -30,9 +30,11 @@ public class PlayerController : MonoBehaviour, IDataSerialiizer {
             } 
 
             if (targetLocation != Vector3.forward) {
-                Vector3 vec = movePoint.position - transform.position;
+                Vector3 vec = targetLocation - transform.position;
                 vec.Normalize();
-                GetComponentInChildren<SimpleAnimation>().FaceDirection(vec);
+                if (vec != Vector3.zero) {
+                    GetComponentInChildren<SimpleAnimation>().FaceDirection(vec);
+                }
                 if (movementHandler.ValidateMove(targetLocation, true, allowedTiles)) {                
                     movePoint.position = targetLocation; 
                 } 

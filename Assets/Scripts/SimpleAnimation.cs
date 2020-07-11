@@ -56,6 +56,7 @@ public class SimpleAnimation : MonoBehaviour {
         } else {
             currentDirection = Direction.DOWN;
         }
+        //Debug.Log("facing vec: " + vec + ", direction: " + currentDirection);
         FaceDirection(currentDirection);
     }
 

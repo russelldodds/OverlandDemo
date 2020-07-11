@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5594550b8744216bdbd7076935a835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximumMonsters: 20
+  maximumMonsters: 0
   respawnRate: 5
   playerController: {fileID: 1060546557}
   monsterPrefabs:
