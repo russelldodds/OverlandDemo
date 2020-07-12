@@ -7,24 +7,24 @@ using UnityEngine.SceneManagement;
 
 public class MovementHandler : MonoBehaviour {
 
-    // protected static MovementHandler _instance = null;
+    protected static MovementHandler _instance = null;
 
-    // public static MovementHandler Instance {
-    //     get {
-    //         if (_instance == null) { _instance = FindObjectOfType<MovementHandler>(); }
-    //         return _instance;
-    //     }
-    //     protected set { _instance = value; }
-    // }
+    public static MovementHandler Instance {
+        get {
+            if (_instance == null) { _instance = FindObjectOfType<MovementHandler>(); }
+            return _instance;
+        }
+        protected set { _instance = value; }
+    }
 
-    // protected virtual void Awake() {
-    //     if (Instance == null) {
-    //         Instance = this;
-    //     } else if (Instance != this) {
-    //         DestroyImmediate(this);
-    //         return;
-    //     }
-    // }
+    protected virtual void Awake() {
+        if (Instance == null) {
+            Instance = this;
+        } else if (Instance != this) {
+            DestroyImmediate(this);
+            return;
+        }
+    }
    
     public PlayerController playerController;
 
@@ -40,6 +40,10 @@ public class MovementHandler : MonoBehaviour {
 
     public Grid grid;
 
+    public SuperMap map;
+
+    public GridTile[,] gridTiles;
+
     // Start is called before the first frame update
     void Start() {
         questHandler = this.GetComponent<QuestHandler>(); 
@@ -52,6 +56,9 @@ public class MovementHandler : MonoBehaviour {
             }
         }
         //Debug.Log("Locations: " + locations.Count);
+        if (gridTiles == null) {
+            StartCoroutine(LoadMapGrid());
+        }
     }
 
     public bool ValidateMove(Vector3 targetLocation, bool isPlayer, List<TileType> tileTypes) {
@@ -109,6 +116,30 @@ public class MovementHandler : MonoBehaviour {
             }
         }
         return gridTile;
+    }
+    
+    IEnumerator LoadMapGrid() {
+        gridTiles = new GridTile[map.m_Width, map.m_Height];
+        for (int i = 0; i < map.m_Width; i++) {
+            for (int j = 0; j < map.m_Height; j++) {
+                Vector3Int tilePos = new Vector3Int(i, j, 0);
+                //Debug.Log("tilePos: " + tilePos);
+                for (int k = 0; k < grid.transform.childCount; k++) {   
+                    GameObject child = grid.transform.GetChild(k).gameObject;
+                    Tilemap tilemap = child.GetComponent<Tilemap>();   
+                    //Debug.Log("tilemap: " + tilemap.name + ", rule: " + rule);
+                    SuperTile tile = tilemap.GetTile<SuperTile>(tilePos);
+                    if (tile != null) {
+                        GridTile gridTile = getTileProperties(tile);
+                        gridTiles[i, j] = gridTile;
+                        break;
+                    }
+                }
+            }
+            // yield for UI updates
+            yield return new WaitForEndOfFrame();
+        }
+        Debug.Log("Grid tiles: " + gridTiles.Length);
     }
     
     IEnumerator LoadLocationScene(string locationName) {
