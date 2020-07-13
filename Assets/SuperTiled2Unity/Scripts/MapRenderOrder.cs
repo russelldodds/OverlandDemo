@@ -1,4 +1,5 @@
 ﻿using UnityEngine.Tilemaps;
+using UnityEngine;
 
 namespace SuperTiled2Unity
 {
@@ -14,6 +15,7 @@ namespace SuperTiled2Unity
     {
         public static TilemapRenderer.SortOrder Tiled2Unity(MapRenderOrder order)
         {
+            Debug.Log(order);
             // Swap top/bottom and right/left when going from Tiled data to Unity
             switch (order)
             {

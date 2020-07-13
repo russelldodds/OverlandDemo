@@ -20,11 +20,27 @@
             }
         },
         "SmallWorld.tmx": {
-            "scale": 1,
+            "scale": 1.5,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 505,
+                "y": 365.3333333333333
+            }
+        },
+        "Test1.tmx": {
+            "scale": 1.5697265624999999,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1977.5,
-                "y": 686
+                "x": 160.53751399776039,
+                "y": 256.0955580440463
+            }
+        },
+        "TestPathfinding.tmx": {
+            "scale": 1.6105468749999998,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 231.90880426873633,
+                "y": 242.77467863206408
             }
         },
         "Tower1.tmx": {
@@ -44,15 +60,17 @@
             }
         }
     },
-    "map.height": 128,
+    "map.height": 16,
     "map.lastUsedFormat": "tmx",
     "map.layerDataFormat": null,
-    "map.width": 128,
+    "map.renderOrder": null,
+    "map.width": 16,
     "openFiles": [
     ],
     "project": "TiledProject.tiled-project",
     "property.type": "int",
     "recentFiles": [
+        "Test1.tmx",
         "World.tmx"
     ]
 }

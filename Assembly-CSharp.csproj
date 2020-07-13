@@ -55,22 +55,45 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CodeMonkey\Assets.cs" />
+     <Compile Include="Assets\CodeMonkey\CMDebug.cs" />
+     <Compile Include="Assets\CodeMonkey\MonoBehaviours\CameraFollow.cs" />
+     <Compile Include="Assets\CodeMonkey\MonoBehaviours\CameraFollowSetup.cs" />
+     <Compile Include="Assets\CodeMonkey\MonoBehaviours\ComponentActions.cs" />
+     <Compile Include="Assets\CodeMonkey\MonoBehaviours\PositionRendererSorter.cs" />
+     <Compile Include="Assets\CodeMonkey\Utils\Button_Sprite.cs" />
+     <Compile Include="Assets\CodeMonkey\Utils\Button_UI.cs" />
+     <Compile Include="Assets\CodeMonkey\Utils\FunctionPeriodic.cs" />
+     <Compile Include="Assets\CodeMonkey\Utils\FunctionTimer.cs" />
+     <Compile Include="Assets\CodeMonkey\Utils\FunctionUpdater.cs" />
+     <Compile Include="Assets\CodeMonkey\Utils\UI_Bar.cs" />
+     <Compile Include="Assets\CodeMonkey\Utils\UI_BarMultiple.cs" />
+     <Compile Include="Assets\CodeMonkey\Utils\UI_Sprite.cs" />
+     <Compile Include="Assets\CodeMonkey\Utils\UI_TextComplex.cs" />
+     <Compile Include="Assets\CodeMonkey\Utils\UtilsClass.cs" />
+     <Compile Include="Assets\CodeMonkey\Utils\World_Bar.cs" />
+     <Compile Include="Assets\CodeMonkey\Utils\World_Mesh.cs" />
+     <Compile Include="Assets\CodeMonkey\Utils\World_Sprite.cs" />
      <Compile Include="Assets\Scripts\Direction.cs" />
      <Compile Include="Assets\Scripts\FadeHandler.cs" />
      <Compile Include="Assets\Scripts\GameHandler.cs" />
-     <Compile Include="Assets\Scripts\GridTile.cs" />
      <Compile Include="Assets\Scripts\IDataSerialiizer.cs" />
      <Compile Include="Assets\Scripts\LoccationHandler.cs" />
      <Compile Include="Assets\Scripts\MonsterGenerator.cs" />
      <Compile Include="Assets\Scripts\MonsterMover.cs" />
      <Compile Include="Assets\Scripts\MovementHandler.cs" />
+     <Compile Include="Assets\Scripts\Pathfinding\GridManager.cs" />
+     <Compile Include="Assets\Scripts\Pathfinding\GridTile.cs" />
+     <Compile Include="Assets\Scripts\Pathfinding\Pathfinding.cs" />
+     <Compile Include="Assets\Scripts\Pathfinding\Testing.cs" />
+     <Compile Include="Assets\Scripts\Pathfinding\TileType.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerInventory.cs" />
      <Compile Include="Assets\Scripts\PlayerPrefsX.cs" />
      <Compile Include="Assets\Scripts\QuestHandler.cs" />
      <Compile Include="Assets\Scripts\SaveLoadHandler.cs" />
      <Compile Include="Assets\Scripts\SimpleAnimation.cs" />
-     <Compile Include="Assets\Scripts\TileType.cs" />
+     <None Include="Assets\CodeMonkey\README.txt" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.3f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

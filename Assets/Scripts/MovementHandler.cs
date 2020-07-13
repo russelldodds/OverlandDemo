@@ -56,9 +56,9 @@ public class MovementHandler : MonoBehaviour {
             }
         }
         //Debug.Log("Locations: " + locations.Count);
-        if (gridTiles == null) {
-            StartCoroutine(LoadMapGrid());
-        }
+        // if (gridTiles == null) {
+        //     StartCoroutine(LoadMapGrid());
+        // }
     }
 
     public bool ValidateMove(Vector3 targetLocation, bool isPlayer, List<TileType> tileTypes) {
@@ -107,7 +107,7 @@ public class MovementHandler : MonoBehaviour {
     }
 
     private GridTile getTileProperties(SuperTile tile) {
-        GridTile gridTile = new GridTile();
+        GridTile gridTile = new GridTile(tile);
         foreach (CustomProperty prop in tile.m_CustomProperties) {
             if (prop.m_Name == "cost") {
                 gridTile.cost = prop.GetValueAsInt();
@@ -130,7 +130,7 @@ public class MovementHandler : MonoBehaviour {
                     //Debug.Log("tilemap: " + tilemap.name + ", rule: " + rule);
                     SuperTile tile = tilemap.GetTile<SuperTile>(tilePos);
                     if (tile != null) {
-                        GridTile gridTile = getTileProperties(tile);
+                        GridTile gridTile = new GridTile(tile);
                         gridTiles[i, j] = gridTile;
                         break;
                     }
