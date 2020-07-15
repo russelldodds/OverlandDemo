@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b0bc9a66960e14b82805b45d9c4863, type: 3}
+  m_Name: 47WaterBrush
+  m_EditorClassIdentifier: 
+  Tileset: {fileID: 11400000, guid: 6fbd331f790fa4172be051735229a186, type: 2}
+  Params:
+    m_paramList: []
+  m_group: 0
+  m_autotilingMode: 1
+  m_showInPalette: 1
+  TileIds: 6d0000006e0000006f000000780000007b000000790000006c0000007d0000007e0000007f0000007a000000be0000008b0000007c0000008d0000008e0000008f000000880000008a000000890000008c0000009c000000b90000009d000000690000006a0000006b00000068000000ba000000ffffffffba00000098000000990000009a0000009b000000ac000000b8000000ad000000a8000000a9000000aa000000ab000000bb0000009f000000bd000000bc000000ae000000af000000bf000000

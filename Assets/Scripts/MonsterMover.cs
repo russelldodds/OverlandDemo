@@ -1,29 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using CreativeSpore.SuperTilemapEditor;
 
 public class MonsterMover : MonoBehaviour {
 
     public int range = 10;
-
     public float lerpSpeed = 5f;
-
     public float attackDelay = 0.25f;
-
     public Transform player;
-
     public Transform movePoint;
-
     public List<TileType> allowedTiles;
-
-    public MovementHandler movementHandler;
-
+    private GridManager gridManager;
     public int monsterType;
-
     private bool isMoving = true;
 
     // Start is called before the first frame update
     void Start() {
+        gridManager = GridManager.Instance;
         movePoint.parent = null;  
         StartCoroutine(HandleMove());   
     }
@@ -33,7 +27,7 @@ public class MonsterMover : MonoBehaviour {
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, lerpSpeed * Time.deltaTime);
 
         // check for fight
-        if (Vector3.Distance(transform.position, player.position) <= 0.05f) {
+        if (Vector3.Distance(transform.position, player.position) <= 0.01f) {
             isMoving = false;
             Debug.Log("**********************  FIGHT  **********************");
             StopAllCoroutines();
@@ -87,7 +81,7 @@ public class MonsterMover : MonoBehaviour {
             }
         }    
 
-        if (targetLocation != Vector3.forward && movementHandler.ValidateMove(targetLocation, false, allowedTiles)) {
+        if (targetLocation != Vector3.forward && gridManager.ValidateMove(targetLocation, allowedTiles)) {
             movePoint.position = targetLocation;
         } else {
             // illegal move, try agian next frame
@@ -103,4 +97,5 @@ public class MonsterMover : MonoBehaviour {
         Destroy(movePoint.gameObject);
         Destroy(gameObject);
     }
+
 }

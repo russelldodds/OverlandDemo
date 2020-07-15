@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SuperTiled2Unity;
 
 public class GridTile {
     private GridManager gridManager;
@@ -14,36 +13,32 @@ public class GridTile {
     public GridTile cameFromTile;
     public int cost;
     public TileType tileType;
+    
+    public GridTile() {
 
-    public GridTile(SuperTile tile) {
-        cost = 0;
-        tileType = TileType.BASE;
-        foreach (CustomProperty prop in tile.m_CustomProperties) {
-            if (prop.m_Name == "cost") {
-                cost = prop.GetValueAsInt();
-            } else if (prop.m_Name == "tileType") {
-                tileType = prop.GetValueAsEnum<TileType>();
-            }
-        }
     }
     
-    public GridTile(GridManager gridManager, int x, int y, SuperTile tile) {
+    public GridTile(GridManager gridManager, int x, int y) {
         this.gridManager = gridManager;
         this.x = x;
         this.y = y;
-        isWalkable = true;
         cost = 0;
-        tileType = TileType.BASE;
-        foreach (CustomProperty prop in tile.m_CustomProperties) {
-            if (prop.m_Name == "cost") {
-                cost = prop.GetValueAsInt();
-            } else if (prop.m_Name == "tileType") {
-                tileType = prop.GetValueAsEnum<TileType>();
-            }
-        }
+        tileType = TileType.BASE;  
+        isWalkable = true;
+    }
+
+    public void SetCost(int cost) {
+        this.cost = cost;
         if (cost < 0) {
             isWalkable = false;
+        } else {
+            isWalkable = true;
         }
+    }
+
+
+    public void SetTileType(TileType tileType) {
+        this.tileType = tileType;
     }
 
     public void CalculateFCost() {
@@ -57,6 +52,6 @@ public class GridTile {
 
     public override string ToString() {
         //return cost.ToString();
-        return x + "," + y;
+        return "cost: " + cost + ", type: " + tileType + ", pos(" + x + "," + y + ")";
     }
 }

@@ -1,24 +1,11 @@
-﻿/* 
-    ------------------- Code Monkey -------------------
-
-    Thank you for downloading this package
-    I hope you find it useful in your projects
-    If you have any questions let me know
-    Cheers!
-
-               unitycodemonkey.com
-    --------------------------------------------------
- */
-
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
-using CodeMonkey.Utils;
+using System.Collections.Generic;
+using CreativeSpore.SuperTilemapEditor;
 
-using SuperTiled2Unity;
-using UnityEngine.Tilemaps;
 public class GridManager {
+
+    public static GridManager Instance { get; private set; }
 
     public event EventHandler<OnGridObjectChangedEventArgs> OnGridObjectChanged;
     public class OnGridObjectChangedEventArgs : EventArgs {
@@ -28,59 +15,71 @@ public class GridManager {
 
     private int width;
     private int height;
-    private float cellWidth;
-    private float cellHeight;
+    private float cellSize;
     private Vector3 originPosition;
     private GridTile[,] gridArray;
-    private SuperMap map;
+    private TilemapGroup tilemaps;
+ 
+    public GridManager(TilemapGroup tilemaps) {
+        Instance = this;
+        this.tilemaps = tilemaps;
+        STETilemap tilemap = tilemaps.Tilemaps[0];
+        this.width = tilemap.GridWidth;
+        this.height = tilemap.GridHeight;
+        this.cellSize = tilemap.CellSize.x; // TODO: deal with this
+        this.originPosition = tilemap.transform.position;
+        Initialize();
+    }
 
-    public GridManager(SuperMap map) {
-        this.map = map;
-        this.width = map.m_Width;
-        this.height = map.m_Height;
-        this.cellWidth = 1;//map.m_TileWidth;
-        this.cellHeight = 1;//map.m_TileHeight;
-        this.originPosition = map.transform.position;
+    public GridManager(int width, int height, float cellSize, Vector3 offset) {
+        this.width = width;
+        this.height = height;
+        this.cellSize = cellSize;
+        this.originPosition = offset; 
+        Initialize();     
+    }
 
-        Grid grid = map.GetComponentInChildren<Grid>();
+    private void Initialize() {
         gridArray = new GridTile[width, height];
 
-        for (int x = 0; x < map.m_Width; x++) {
-            for (int y = 0; y < map.m_Height; y++) {
-                Vector3Int tilePos = new Vector3Int(x, -y, 0);
-                //Debug.Log("tilePos: " + tilePos);
-                for (int t = 0; t < grid.transform.childCount; t++) {   
-                    GameObject child = grid.transform.GetChild(t).gameObject;
-                    Tilemap tilemap = child.GetComponent<Tilemap>();   
-                    //Debug.Log("tilemap: " + tilemap.name);
-                    SuperTile tile = tilemap.GetTile<SuperTile>(tilePos);
-                    if (tile != null) {
-                        //Debug.Log("tilemap: " + tilemap.name + ", tile: " + tile.name);
-                        GridTile gridTile = new GridTile(this, x, y, tile);
-                        gridArray[x, y] = gridTile;
-                        break;
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                GridTile gridTile = new GridTile(this, x, y);
+                if (tilemaps != null) {
+                    tilemaps.Tilemaps.Reverse();
+                    foreach (STETilemap tilemap in tilemaps.Tilemaps) {
+                        Tile tile = tilemap.GetTile(x, y);
+                        if (tile != null) {
+                            //Debug.Log("Matched Tile Map: " + tilemap.name);
+                            gridTile.SetCost(tile.paramContainer.GetIntParam("cost", 0));
+                            Enum.TryParse<TileType>(tile.paramContainer.GetStringParam("type", TileType.BASE.ToString()), out TileType tileType);
+                            gridTile.SetTileType(tileType);
+                            break;
+                        }                       
                     }
                 }
+                gridArray[x, y] = gridTile;
             }
         }
 
-        bool showDebug = true;
+        bool showDebug = false;
         if (showDebug) {
-            TextMesh[,] debugTextArray = new TextMesh[width, height];
+            //TextMesh[,] debugTextArray = new TextMesh[width, height];
 
-            for (int x = 0; x < gridArray.GetLength(0); x++) {
+             for (int x = 0; x < gridArray.GetLength(0); x++) {
                 for (int y = 0; y < gridArray.GetLength(1); y++) {
-                    debugTextArray[x, y] = UtilsClass.CreateWorldText(gridArray[x, y]?.ToString(), null, GetWorldPosition(x, y) + new Vector3(cellWidth, cellHeight) * .5f, 6, Color.white, TextAnchor.MiddleCenter);
-                    Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y - 1), Color.white, 100f);
+                    //debugTextArray[x, y] = UtilsClass.CreateWorldText(gridArray[x, y]?.ToString(), null, GetWorldPosition(x, y) + new Vector3(cellSize, cellSize) * .5f, 30, Color.white, TextAnchor.MiddleCenter);
+                    Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.white, 100f);
                     Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.white, 100f);
                 }
             }
-            Debug.DrawLine(GetWorldPosition(0, 0), GetWorldPosition(width, 0), Color.white, 100f);
+            Debug.DrawLine(GetWorldPosition(0, height), GetWorldPosition(width, height), Color.white, 100f);
             Debug.DrawLine(GetWorldPosition(width, 0), GetWorldPosition(width, height), Color.white, 100f);
 
-            OnGridObjectChanged += (object sender, OnGridObjectChangedEventArgs eventArgs) => {
-                debugTextArray[eventArgs.x, eventArgs.y].text = gridArray[eventArgs.x, eventArgs.y]?.ToString();
-            };
+
+            // OnGridObjectChanged += (object sender, OnGridObjectChangedEventArgs eventArgs) => {
+            //     debugTextArray[eventArgs.x, eventArgs.y].text = gridArray[eventArgs.x, eventArgs.y]?.ToString();
+            // };
         }
     }
 
@@ -92,27 +91,22 @@ public class GridManager {
         return height;
     }
 
-    public float GetCellWidth() {
-        return cellWidth;
-    }
-
-    public float GetCellHeight() {
-        return cellHeight;
+    public float GetCellSize() {
+        return cellSize;
     }
 
     public Vector3 GetWorldPosition(int x, int y) {
-        // TODO: deal with different height
-        return new Vector3(x, -y - 1) * cellWidth + originPosition;
+        return new Vector3(x, y) * cellSize + originPosition;
     }
 
     public void GetXY(Vector3 worldPosition, out int x, out int y) {
-        x = Mathf.FloorToInt((worldPosition - originPosition).x / cellWidth);
-        y = Mathf.CeilToInt((worldPosition - originPosition).y / cellHeight);
+        x = Mathf.FloorToInt((worldPosition - originPosition).x / cellSize);
+        y = Mathf.FloorToInt((worldPosition - originPosition).y / cellSize);
     }
 
     public void SetGridTile(int x, int y, GridTile value) {
-        if (x >= 0 && y <= 0 && x < width && y > -height) {
-            gridArray[x, -y] = value;
+        if (x >= 0 && y >= 0 && x < width && y < height) {
+            gridArray[x, y] = value;
             if (OnGridObjectChanged != null) OnGridObjectChanged(this, new OnGridObjectChangedEventArgs { x = x, y = y });
         }
     }
@@ -128,8 +122,8 @@ public class GridManager {
     }
 
     public GridTile GetGridTile(int x, int y) {
-        if (x >= 0 && y <= 0 && x < width && y > -height) {
-            return gridArray[x, -y];
+        if (x >= 0 && y >= 0 && x < width && y < height) {
+            return gridArray[x, y];
         } else {
             return default(GridTile);
         }
@@ -139,6 +133,15 @@ public class GridManager {
         int x, y;
         GetXY(worldPosition, out x, out y);
         return GetGridTile(x, y);
+    }
+
+    public bool ValidateMove(Vector3 targetLocation, List<TileType> tileTypes) {
+        GridTile tile = GetGridTile(targetLocation);
+        //Debug.Log("Matched tile: " + tile);
+        if (tile == null || tile.cost < 0 || !tileTypes.Contains(tile.tileType)) {
+            return false;
+        }  
+        return true;                     
     }
 
 }

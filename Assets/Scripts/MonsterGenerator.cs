@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CreativeSpore.SuperTilemapEditor;
 
 public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
 
@@ -8,16 +9,15 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
 
     public int respawnRate;
 
-    public PlayerController playerController;
+    public PlayerPathController playerController;
 
     public List<GameObject> monsterPrefabs;
 
-    public MovementHandler movementHandler;
-
-    public SuperTiled2Unity.SuperMap map;
+    private GridManager gridManager;
 
     // Start is called before the first frame update
     IEnumerator Start() {
+        gridManager = GridManager.Instance;
         yield return new WaitForSeconds(respawnRate);
         StartCoroutine(Respawn());
     }
@@ -44,15 +44,15 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
         monster.transform.parent = transform;
         mover = monster.GetComponent<MonsterMover>();
         mover.player = playerController.transform;
-        mover.movementHandler = movementHandler;
+        //mover.movementHandler = movementHandler;
         mover.monsterType = monsterType;
     }
 
     private Vector3 GetValidTile(List<TileType> allowedTiles) {
-        int randX = Random.Range(0, map.m_Width);
-        int randY = Random.Range(0, map.m_Height);
-        Vector3 targetLocation  = new Vector3(randX, -randY, 0);
-        if (movementHandler.ValidateMove(targetLocation, false, allowedTiles)) {
+        int randX = Random.Range(0, gridManager.GetWidth());
+        int randY = Random.Range(0, gridManager.GetHeight());
+        Vector3 targetLocation  = new Vector3(randX, randY, 0);
+        if (gridManager.ValidateMove(targetLocation, allowedTiles)) {
             return targetLocation;
         } else {
             return Vector3.forward;

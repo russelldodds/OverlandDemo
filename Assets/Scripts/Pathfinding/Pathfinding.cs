@@ -13,7 +13,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SuperTiled2Unity;
 
 public class Pathfinding {
 
@@ -23,9 +22,9 @@ public class Pathfinding {
     private List<GridTile> openList;
     private List<GridTile> closedList;
 
-    public Pathfinding(SuperMap map) {
+    public Pathfinding() {
         Instance = this;
-        gridManager = new GridManager(map);
+        this.gridManager = GridManager.Instance;
     }
 
     public GridManager GetGridManager() {
@@ -42,7 +41,7 @@ public class Pathfinding {
         } else {
             List<Vector3> vectorPath = new List<Vector3>();
             foreach (GridTile gridTile in path) {
-                vectorPath.Add(new Vector3(gridTile.x, gridTile.y) * gridManager.GetCellWidth() + Vector3.one * gridManager.GetCellWidth() * .5f);
+                vectorPath.Add(new Vector3(gridTile.x, gridTile.y) * gridManager.GetCellSize() + Vector3.one * gridManager.GetCellSize() * .5f);
             }
             return vectorPath;
         }
@@ -64,7 +63,7 @@ public class Pathfinding {
 
         for (int x = 0; x < gridManager.GetWidth(); x++) {
             for (int y = 0; y < gridManager.GetHeight(); y++) {
-                GridTile GridTile = gridManager.GetGridTile(x, -y);
+                GridTile GridTile = gridManager.GetGridTile(x, y);
                 GridTile.gCost = 99999999;
                 GridTile.CalculateFCost();
                 GridTile.cameFromTile = null;
@@ -90,7 +89,7 @@ public class Pathfinding {
             openList.Remove(currentNode);
             closedList.Add(currentNode);
 
-            Debug.Log("currentNode: " + currentNode);
+            //Debug.Log("currentNode: " + currentNode);
             foreach (GridTile neighbourNode in GetNeighbourList(currentNode)) {
                 if (closedList.Contains(neighbourNode)) continue;
                 if (!neighbourNode.isWalkable) {
@@ -136,7 +135,7 @@ public class Pathfinding {
     }
 
     public GridTile GetNode(int x, int y) {
-        return gridManager.GetGridTile(x, -y);
+        return gridManager.GetGridTile(x, y);
     }
 
     private List<GridTile> CalculatePath(GridTile endNode) {

@@ -7,11 +7,11 @@ public class SaveLoadHandler : MonoBehaviour {
 
     public MonsterGenerator monsterGenerator;
 
-    public PlayerController playerController;
+    public PlayerPathController playerPathController;
 
-    public QuestHandler questHandler;
+    private QuestHandler questHandler;
 
-    public PlayerInventory playerInventory;
+    private PlayerInventory playerInventory;
 
     public bool loadAtStart = false;
 
@@ -19,7 +19,9 @@ public class SaveLoadHandler : MonoBehaviour {
 
     // Start is called before the first frame update
     IEnumerator Start() {
-       if (loadAtStart) {
+        questHandler = GetComponent<QuestHandler>();
+        playerInventory = GetComponent<PlayerInventory>();
+        if (loadAtStart) {
             // delay to allow map and things to load
             yield return new WaitForEndOfFrame();
             Load();           
@@ -39,7 +41,7 @@ public class SaveLoadHandler : MonoBehaviour {
         //Debug.Log("SAVING");
         isProcessing = true;
         monsterGenerator?.Save();
-        playerController?.Save();
+        playerPathController?.Save();
         questHandler?.Save();
         playerInventory?.Save();
         isProcessing = false;
@@ -48,7 +50,7 @@ public class SaveLoadHandler : MonoBehaviour {
     public void Load() {
         //Debug.Log("LOADING");
         isProcessing = true;
-        playerController?.Load();
+        playerPathController?.Load();
         monsterGenerator?.Load();
         questHandler?.Load();
         playerInventory?.Load();
