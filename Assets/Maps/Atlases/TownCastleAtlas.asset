@@ -1346,7 +1346,14 @@ MonoBehaviour:
       vertices: []
       type: 0
     paramContainer:
-      m_paramList: []
+      m_paramList:
+      - name: cost
+        _paramType: 2
+        _boolValue: 0
+        _intValue: -1
+        _floatValue: 0
+        _stringValue: 
+        _objectValue: {fileID: 0}
     prefabData:
       prefab: {fileID: 0}
       offset: {x: 0, y: 0, z: 0}
@@ -1498,7 +1505,21 @@ MonoBehaviour:
       vertices: []
       type: 0
     paramContainer:
-      m_paramList: []
+      m_paramList:
+      - name: cost
+        _paramType: 2
+        _boolValue: 0
+        _intValue: 0
+        _floatValue: 0
+        _stringValue: 
+        _objectValue: {fileID: 0}
+      - name: type
+        _paramType: 5
+        _boolValue: 0
+        _intValue: 0
+        _floatValue: 0
+        _stringValue: lOCATION
+        _objectValue: {fileID: 0}
     prefabData:
       prefab: {fileID: 0}
       offset: {x: 0, y: 0, z: 0}
@@ -2068,7 +2089,14 @@ MonoBehaviour:
       vertices: []
       type: 0
     paramContainer:
-      m_paramList: []
+      m_paramList:
+      - name: cost
+        _paramType: 2
+        _boolValue: 0
+        _intValue: -1
+        _floatValue: 0
+        _stringValue: 
+        _objectValue: {fileID: 0}
     prefabData:
       prefab: {fileID: 0}
       offset: {x: 0, y: 0, z: 0}
@@ -2087,7 +2115,21 @@ MonoBehaviour:
       vertices: []
       type: 0
     paramContainer:
-      m_paramList: []
+      m_paramList:
+      - name: cost
+        _paramType: 2
+        _boolValue: 0
+        _intValue: 0
+        _floatValue: 0
+        _stringValue: 
+        _objectValue: {fileID: 0}
+      - name: type
+        _paramType: 5
+        _boolValue: 0
+        _intValue: 0
+        _floatValue: 0
+        _stringValue: LOCATION
+        _objectValue: {fileID: 0}
     prefabData:
       prefab: {fileID: 0}
       offset: {x: 0, y: 0, z: 0}
@@ -2106,7 +2148,14 @@ MonoBehaviour:
       vertices: []
       type: 0
     paramContainer:
-      m_paramList: []
+      m_paramList:
+      - name: cost
+        _paramType: 2
+        _boolValue: 0
+        _intValue: -1
+        _floatValue: 0
+        _stringValue: 
+        _objectValue: {fileID: 0}
     prefabData:
       prefab: {fileID: 0}
       offset: {x: 0, y: 0, z: 0}

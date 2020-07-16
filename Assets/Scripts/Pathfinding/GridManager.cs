@@ -3,10 +3,8 @@ using UnityEngine;
 using System.Collections.Generic;
 using CreativeSpore.SuperTilemapEditor;
 
-public class GridManager {
-
-    public static GridManager Instance { get; private set; }
-
+public class GridManager : MonoBehaviour {
+    public TilemapGroup tilemaps;
     public event EventHandler<OnGridObjectChangedEventArgs> OnGridObjectChanged;
     public class OnGridObjectChangedEventArgs : EventArgs {
         public int x;
@@ -18,28 +16,14 @@ public class GridManager {
     private float cellSize;
     private Vector3 originPosition;
     private GridTile[,] gridArray;
-    private TilemapGroup tilemaps;
- 
-    public GridManager(TilemapGroup tilemaps) {
-        Instance = this;
-        this.tilemaps = tilemaps;
+
+    private void Start() {
         STETilemap tilemap = tilemaps.Tilemaps[0];
         this.width = tilemap.GridWidth;
         this.height = tilemap.GridHeight;
         this.cellSize = tilemap.CellSize.x; // TODO: deal with this
         this.originPosition = tilemap.transform.position;
-        Initialize();
-    }
 
-    public GridManager(int width, int height, float cellSize, Vector3 offset) {
-        this.width = width;
-        this.height = height;
-        this.cellSize = cellSize;
-        this.originPosition = offset; 
-        Initialize();     
-    }
-
-    private void Initialize() {
         gridArray = new GridTile[width, height];
 
         for (int x = 0; x < width; x++) {
@@ -47,8 +31,8 @@ public class GridManager {
                 GridTile gridTile = new GridTile(this, x, y);
                 if (tilemaps != null) {
                     tilemaps.Tilemaps.Reverse();
-                    foreach (STETilemap tilemap in tilemaps.Tilemaps) {
-                        Tile tile = tilemap.GetTile(x, y);
+                    foreach (STETilemap checkmap in tilemaps.Tilemaps) {
+                        Tile tile = checkmap.GetTile(x, y);
                         if (tile != null) {
                             //Debug.Log("Matched Tile Map: " + tilemap.name);
                             gridTile.SetCost(tile.paramContainer.GetIntParam("cost", 0));

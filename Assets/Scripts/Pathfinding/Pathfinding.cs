@@ -16,15 +16,12 @@ using UnityEngine;
 
 public class Pathfinding {
 
-    public static Pathfinding Instance { get; private set; }
-
     private GridManager gridManager;
     private List<GridTile> openList;
     private List<GridTile> closedList;
 
-    public Pathfinding() {
-        Instance = this;
-        this.gridManager = GridManager.Instance;
+    public Pathfinding(GridManager gridManager) {
+        this.gridManager = gridManager;
     }
 
     public GridManager GetGridManager() {
