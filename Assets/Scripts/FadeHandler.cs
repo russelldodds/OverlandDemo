@@ -4,20 +4,27 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class FadeHandler : MonoBehaviour {
-
     public GameObject fadeImage;
+    public float fadeSpeed = 1.0f;
+    Image image;
 
-    public float fadeSpeed =1.0f;
-
-    // Start is called before the first frame update
     void Start() {
-        fadeImage.SetActive(true);       
-        fadeImage.GetComponent<Image>().CrossFadeAlpha(0f, fadeSpeed, false);
+        image = fadeImage.GetComponent<Image>();
     }
 
-    void OnDestroy() {
-        fadeImage.GetComponent<Image>().CrossFadeAlpha(1f, 0, false);
-        fadeImage.SetActive(false);
-    }
+    public IEnumerator FadeOut() {
+        // reset the image state
+        image.gameObject.SetActive(true);
+        image.canvasRenderer.SetAlpha(1f);
 
+        // wait 1 frame so that the alpha is actually set
+        yield return new WaitForEndOfFrame();         
+        image.CrossFadeAlpha(0f, fadeSpeed, false);
+
+        // once done inactivate again
+        yield return new WaitForSeconds(fadeSpeed);
+        image.gameObject.SetActive(false);
+
+        GridManager.Instance.isLoading = false;
+    }
 }

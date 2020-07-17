@@ -20,12 +20,8 @@ public class Pathfinding {
     private List<GridTile> openList;
     private List<GridTile> closedList;
 
-    public Pathfinding(GridManager gridManager) {
-        this.gridManager = gridManager;
-    }
-
-    public GridManager GetGridManager() {
-        return gridManager;
+    public Pathfinding() {
+        this.gridManager = GridManager.Instance;
     }
 
     public List<Vector3> FindPath(Vector3 startWorldPosition, Vector3 endWorldPosition) {

@@ -97,9 +97,8 @@
      <Compile Include="Assets\Scripts\Data\IDataSerialiizer.cs" />
      <Compile Include="Assets\Scripts\Data\PlayerPrefsX.cs" />
      <Compile Include="Assets\Scripts\Data\SaveLoadHandler.cs" />
+     <Compile Include="Assets\Scripts\Data\Singleton.cs" />
      <Compile Include="Assets\Scripts\FadeHandler.cs" />
-     <Compile Include="Assets\Scripts\GameHandler.cs" />
-     <Compile Include="Assets\Scripts\LocationHandler.cs" />
      <Compile Include="Assets\Scripts\Monster\MonsterGenerator.cs" />
      <Compile Include="Assets\Scripts\Monster\MonsterMover.cs" />
      <Compile Include="Assets\Scripts\Monster\SimpleAnimation.cs" />

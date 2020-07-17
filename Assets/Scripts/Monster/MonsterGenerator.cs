@@ -12,11 +12,11 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
     public PlayerController playerController;
 
     public List<GameObject> monsterPrefabs;
-
-    public GridManager gridManager;
+    private GridManager gridManager;
 
     // Start is called before the first frame update
     IEnumerator Start() {
+        gridManager = GridManager.Instance;
         yield return new WaitForSeconds(respawnRate);
         StartCoroutine(Respawn());
     }
@@ -44,7 +44,6 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
         mover = monster.GetComponent<MonsterMover>();
         mover.player = playerController.transform;
         mover.monsterType = monsterType;
-        mover.gridManager = gridManager;
     }
 
     private Vector3 GetValidTile(List<TileType> allowedTiles) {

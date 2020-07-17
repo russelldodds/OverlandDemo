@@ -31,17 +31,17 @@ public class SaveLoadHandler : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyUp(KeyCode.Alpha1) && !isProcessing) {
-            Save();
+            Save(true);
         } else if (Input.GetKeyUp(KeyCode.Alpha2) && !isProcessing) {
             Load();
         }       
     }
 
-    public void Save() {
+    public void Save(bool saveLocation) {
         //Debug.Log("SAVING");
         isProcessing = true;
         monsterGenerator?.Save();
-        playerController?.Save();
+        if (saveLocation) playerController?.Save();
         questHandler?.Save();
         playerInventory?.Save();
         isProcessing = false;

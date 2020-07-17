@@ -6,15 +6,14 @@ using CreativeSpore.SuperTilemapEditor;
 
 
 public class PlayerController : MonoBehaviour, IDataSerialiizer {
-    public TilemapGroup tilemaps;
     public List<TileType> allowedTiles;
     private Pathfinding pathfinding;
-    public GridManager gridManager;
+    public Vector3 startingLocation = new Vector3(12.5f, 114.5f, 0.5f);
     private void Start() {
-        pathfinding = new Pathfinding(gridManager);
+        pathfinding = new Pathfinding();
     }
     private void Update() {       
-        if (Input.GetMouseButtonDown(0)) {
+        if (!GridManager.Instance.isLoading && Input.GetMouseButtonDown(0)) {
             StopAllCoroutines();
             Vector3 mouseWorldPosition = UtilsClass.GetMouseWorldPosition();
             Debug.Log("mouseWorldPosition: " + mouseWorldPosition);
@@ -34,7 +33,7 @@ public class PlayerController : MonoBehaviour, IDataSerialiizer {
     }
 
     public void Load() {
-        Vector3 playerPosition = PlayerPrefsX.GetVector3("playerPosition");
+        Vector3 playerPosition = PlayerPrefsX.GetVector3("playerPosition", startingLocation);
         if (playerPosition != null && playerPosition != Vector3.zero) {
             // seems like the laoding causes float errors
             playerPosition.x = Mathf.FloorToInt(playerPosition.x) + 0.5f;

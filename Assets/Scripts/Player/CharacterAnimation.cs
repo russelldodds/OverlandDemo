@@ -7,13 +7,10 @@ public class CharacterAnimation : MonoBehaviour {
     public Sprite[] right;
     public Sprite[] up;
     public Sprite[] down;
-
     public float frameDelay = 0.07f;
 
     private SpriteRenderer spriteRenderer; 
-
     private Direction currentDirection = Direction.DOWN;
-
     private Vector3 targetLoc;
 
     // Start is called before the first frame update
@@ -87,7 +84,6 @@ public class CharacterAnimation : MonoBehaviour {
         while (i < left.Length) {
             spriteRenderer.sprite = sprites[i++];
             yield return new WaitForSecondsRealtime(frameDelay);
-            yield return 0;
         }
         if (Vector3.Distance(transform.position, targetLoc) == 0f) {
             AnimateIdle();

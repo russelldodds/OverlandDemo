@@ -11,12 +11,13 @@ public class MonsterMover : MonoBehaviour {
     public Transform player;
     public Transform movePoint;
     public List<TileType> allowedTiles;
-    public GridManager gridManager;
+    private GridManager gridManager;
     public int monsterType;
     private bool isMoving = true;
 
     // Start is called before the first frame update
     void Start() {
+        gridManager = GridManager.Instance;
         movePoint.parent = null;  
         StartCoroutine(HandleMove());   
     }
