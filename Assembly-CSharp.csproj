@@ -129,10 +129,9 @@
      <Compile Include="Assets\Scripts\Pathfinding\TileType.cs" />
      <Compile Include="Assets\Scripts\Player\CharacterAnimation.cs" />
      <Compile Include="Assets\Scripts\Player\Direction.cs" />
+     <Compile Include="Assets\Scripts\Player\GameDataManager.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerInventory.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMover.cs" />
-     <Compile Include="Assets\Scripts\Player\QuestHandler.cs" />
      <None Include="Assets\Libraries\CreativeSpore\SuperTilemapEditor\changelog.txt" />
      <None Include="Assets\Libraries\CreativeSpore\SuperTilemapEditor - Extra\Tileset - Samples\Tiled - Tmx Import\license.txt" />
      <None Include="Assets\Libraries\CodeMonkey\README.txt" />

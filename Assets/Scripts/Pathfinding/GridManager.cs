@@ -10,17 +10,15 @@ public class GridManager : Singleton<GridManager> {
         public int x;
         public int y;
     }
-    //public bool isLoading = false;
-
-    private int width;
-    private int height;
-    private float cellSize;
-    private Vector3 originPosition;
-    private GridTile[,] gridArray;
-    private Dictionary<string, GridTile[,]> grids = new Dictionary<string, GridTile[,]>();
-    private Dictionary<string, LocationTarget> entrances = new Dictionary<string, LocationTarget>();
-    private Dictionary<string, TilemapGroup> maps = new Dictionary<string, TilemapGroup>();
-    private TilemapGroup tilemapGroup;
+    static int width;
+    static int height;
+    static float cellSize;
+    static Vector3 originPosition;
+    static GridTile[,] gridArray;
+    static Dictionary<string, GridTile[,]> grids = new Dictionary<string, GridTile[,]>();
+    static Dictionary<string, LocationTarget> entrances = new Dictionary<string, LocationTarget>();
+    static Dictionary<string, TilemapGroup> maps = new Dictionary<string, TilemapGroup>();
+    static TilemapGroup tilemapGroup;
 
     private void Start() {
     }
@@ -33,40 +31,39 @@ public class GridManager : Singleton<GridManager> {
 
         if (groups != null && groups.Length > 0) {
             foreach (TilemapGroup group in groups) {
-                if (!maps.ContainsKey(group.name)) {
-                    maps.Add(group.name, group); 
-                }                      
+                maps.Add(group.name, group);           
             }
         } 
         Debug.Log("Map count: " + maps.Count);
 
         if (locations != null && locations.Length > 0) {
             foreach (LocationTarget location in locations) {
-                if (!entrances.ContainsKey(location.name)) {
-                    entrances.Add(location.name, location);    
-                }    
+                entrances.Add(location.name, location);  
             }
         } 
         Debug.Log("Entrance count: " + entrances.Count);      
     }
 
     public void LoadMap(string locationName) {
-        //isLoading = true;
-        //StartCoroutine(GetComponent<FadeHandler>().FadeOut());
         if (!maps.ContainsKey(locationName)) {
-            locationName = WORLD;
+            Dictionary<string, TilemapGroup>.Enumerator itr = maps.GetEnumerator();
+            itr.MoveNext();
+            KeyValuePair<string, TilemapGroup> entry = itr.Current;
+            Debug.Log(entry);
+            locationName = entry.Key;
+            tilemapGroup = entry.Value;
+        } else {
+            maps.TryGetValue(locationName, out tilemapGroup);        
         }
-
-        Debug.Log("Load Location: " + locationName);
     
         // load the grid
-        PlayerPrefs.SetString("locationName", locationName);       
-        maps.TryGetValue(locationName, out tilemapGroup);
-
         if (tilemapGroup == null) {
             // something went horribly wrong
+            Debug.Log("Something went horribly wrong");
             return;
         }
+
+        Debug.Log("Load Location: " + locationName + ", tilemap: " + tilemapGroup);
 
         // toggle active state
         tilemapGroup.gameObject.SetActive(true);
@@ -96,10 +93,10 @@ public class GridManager : Singleton<GridManager> {
         }
             
         STETilemap tilemap = tilemapGroup.Tilemaps[0];
-        this.width = tilemap.GridWidth;
-        this.height = tilemap.GridHeight;
-        this.cellSize = tilemap.CellSize.x; // TODO: deal with this
-        this.originPosition = tilemap.transform.position;
+        width = tilemap.GridWidth;
+        height = tilemap.GridHeight;
+        cellSize = tilemap.CellSize.x; // TODO: deal with this
+        originPosition = tilemap.transform.position;
 
         grids.TryGetValue(tilemapGroup.name, out gridArray);
         if (gridArray == null || gridArray.Length <= 0) {
@@ -213,6 +210,8 @@ public class GridManager : Singleton<GridManager> {
     }
 
     public void CheckEntrance(Vector3 targetLocation) {
+        Debug.Log("Active tilemapGroup: " + tilemapGroup);
+        
         LocationData locationData = tilemapGroup.GetComponent<LocationData>();       
         bool savePlayerPosition = false;
         if (locationData.sceneName.Equals(WORLD)) {
@@ -220,7 +219,6 @@ public class GridManager : Singleton<GridManager> {
         }
         Debug.Log("Check Entrances at: " + targetLocation);
         foreach (KeyValuePair<string, LocationTarget> entry in entrances) {
-            if (entry.Value == null) continue;
             Debug.Log("Check location: " + entry);  
             if (Vector3.Distance(entry.Value.transform.position, targetLocation) <= 0.5f) {
                 Debug.Log("Enter location: " + entry.Key);                
@@ -228,6 +226,7 @@ public class GridManager : Singleton<GridManager> {
                     { "savePlayerPosition", savePlayerPosition }
                 });
                 if (entry.Value.sceneName.Equals(locationData.sceneName)) {
+                    PlayerPrefs.SetString("locationName", entry.Value.activeLocation);
                     LoadMap(entry.Key);
                 } else {
                     EventManager.TriggerEvent("LoadScene", new Dictionary<string, object> { 

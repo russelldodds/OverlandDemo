@@ -18,7 +18,7 @@ public class LocationManager : MonoBehaviour {
     }
  
     void Start() { 
-        TilemapGroup[] maps = GetComponentsInChildren<TilemapGroup>();
+        TilemapGroup[] maps = GetComponentsInChildren<TilemapGroup>(true);
         LocationTarget[] locations = GetComponentsInChildren<LocationTarget>();   
         GridManager.Instance.InitializeScene(maps, locations);
 
