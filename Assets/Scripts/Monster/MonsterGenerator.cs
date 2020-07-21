@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using CreativeSpore.SuperTilemapEditor;
 
-public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
+public class MonsterGenerator : MonoBehaviour {
 
     public int maximumMonsters;
 
@@ -13,6 +13,16 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
 
     public List<GameObject> monsterPrefabs;
     private GridManager gridManager;
+
+    void OnEnable() {
+        EventManager.StartListening("SaveGame", OnSaveGame);
+        EventManager.StartListening("LoadGame", OnLoadGame);
+    }
+
+    void OnDisable() {
+        EventManager.StopListening("SaveGame", OnSaveGame);
+        EventManager.StopListening("LoadGame", OnLoadGame);
+    }
 
     // Start is called before the first frame update
     IEnumerator Start() {
@@ -65,7 +75,7 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
         StartCoroutine(Respawn());
     }
 
-    public void Save() {
+    public void OnSaveGame(Dictionary<string, object> message) {
         Vector3[] monsterLocations = new Vector3[transform.childCount];
         int[] monsterTypes = new int[transform.childCount];
 
@@ -79,7 +89,7 @@ public class MonsterGenerator : MonoBehaviour, IDataSerialiizer {
         PlayerPrefsX.SetIntArray("monsterTypes", monsterTypes);
     }
 
-    public void Load() {
+    public void OnLoadGame(Dictionary<string, object> message) {
         StopAllCoroutines();
         Vector3[] monsterLocations = PlayerPrefsX.GetVector3Array("monsterLocations");
         int[] monsterTypes = PlayerPrefsX.GetIntArray("monsterTypes");

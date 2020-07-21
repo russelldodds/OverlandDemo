@@ -5,15 +5,28 @@ using CodeMonkey.Utils;
 using CreativeSpore.SuperTilemapEditor;
 
 
-public class PlayerController : MonoBehaviour, IDataSerialiizer {
+public class PlayerController : MonoBehaviour {
     public List<TileType> allowedTiles;
     private Pathfinding pathfinding;
-    public Vector3 startingLocation = new Vector3(12.5f, 114.5f, 0.5f);
-    private void Start() {
+    private CharacterAnimation characterAnimation;
+
+    void OnEnable() {
         pathfinding = new Pathfinding();
+        characterAnimation = GetComponentInChildren<CharacterAnimation>();
+
+        EventManager.StartListening("SaveGame", OnSaveGame);
+        EventManager.StartListening("LoadGame", OnLoadGame);
+        EventManager.StartListening("SetPlayerLocation", OnSetPlayerLocation);
     }
+
+    void OnDisable() {
+        EventManager.StopListening("SaveGame", OnSaveGame);
+        EventManager.StopListening("LoadGame", OnLoadGame);
+        EventManager.StopListening("SetPlayerLocation", OnSetPlayerLocation);
+    }
+
     private void Update() {       
-        if (!GridManager.Instance.isLoading && Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0)) {
             StopAllCoroutines();
             Vector3 mouseWorldPosition = UtilsClass.GetMouseWorldPosition();
             Debug.Log("mouseWorldPosition: " + mouseWorldPosition);
@@ -22,9 +35,12 @@ public class PlayerController : MonoBehaviour, IDataSerialiizer {
         }
     }
 
-    public void Save() {
-        PlayerPrefsX.SetVector3("playerPosition", transform.position);
-
+    public void OnSaveGame(Dictionary<string, object> message) {
+        bool savePlayerPosition = (bool)message["savePlayerPosition"];
+        if (savePlayerPosition) {
+            PlayerPrefsX.SetVector3("playerPosition", transform.position);
+        }
+        
         string [] strAllowedTiles = new string[allowedTiles.Count];
         for (int i = 0; i < allowedTiles.Count; i++) {
             strAllowedTiles[i] = allowedTiles[i].ToString();
@@ -32,8 +48,8 @@ public class PlayerController : MonoBehaviour, IDataSerialiizer {
         PlayerPrefsX.SetStringArray("playerTiles", strAllowedTiles);
     }
 
-    public void Load() {
-        Vector3 playerPosition = PlayerPrefsX.GetVector3("playerPosition", startingLocation);
+    public void OnLoadGame(Dictionary<string, object> message) {
+        Vector3 playerPosition = PlayerPrefsX.GetVector3("playerPosition", Vector3.zero);
         if (playerPosition != null && playerPosition != Vector3.zero) {
             // seems like the laoding causes float errors
             playerPosition.x = Mathf.FloorToInt(playerPosition.x) + 0.5f;
@@ -49,5 +65,11 @@ public class PlayerController : MonoBehaviour, IDataSerialiizer {
         }
 
         Debug.Log("LOADED position: " + playerPosition);
+    }
+
+    void OnSetPlayerLocation(Dictionary<string, object> message) {
+        transform.position = (Vector3)message["position"];
+        Direction direction = (Direction)message["direction"];
+        characterAnimation.AnimateDirection(direction, false);
     }
 }

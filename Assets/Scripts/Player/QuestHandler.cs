@@ -2,18 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestHandler : MonoBehaviour, IDataSerialiizer {
+public class QuestHandler : MonoBehaviour {
     public long minutes = 0;
- 
-    public void IncrementTime(long increment) {
-        minutes += increment;
+
+    void OnEnable() {
+        EventManager.StartListening("SaveGame", OnSaveGame);
+        EventManager.StartListening("LoadGame", OnLoadGame);
+        EventManager.StartListening("IncrementTime", OnIncrementTime);
     }
 
-    public void Save() {
+    void OnDisable() {
+        EventManager.StopListening("SaveGame", OnSaveGame);
+        EventManager.StopListening("LoadGame", OnLoadGame);
+        EventManager.StopListening("IncrementTime", OnIncrementTime);
+    }
+ 
+    void OnIncrementTime(Dictionary<string, object> message) {
+        minutes += (int)message["minutes"];
+    }
+
+    public void OnSaveGame(Dictionary<string, object> message) {
         PlayerPrefsX.SetLong("gameMinutes", minutes);
     }
 
-    public void Load() {
+    public void OnLoadGame(Dictionary<string, object> message) {
         long gameMinutes = PlayerPrefsX.GetLong("gameMinutes");
         minutes = gameMinutes;
     }

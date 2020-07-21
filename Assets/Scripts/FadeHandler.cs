@@ -13,6 +13,8 @@ public class FadeHandler : MonoBehaviour {
     }
 
     public IEnumerator FadeOut() {
+        yield return new WaitForEndOfFrame();         
+        
         // reset the image state
         image.gameObject.SetActive(true);
         image.canvasRenderer.SetAlpha(1f);
@@ -25,6 +27,6 @@ public class FadeHandler : MonoBehaviour {
         yield return new WaitForSeconds(fadeSpeed);
         image.gameObject.SetActive(false);
 
-        GridManager.Instance.isLoading = false;
+        //GridManager.Instance.isLoading = false;
     }
 }

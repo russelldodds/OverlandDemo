@@ -5,14 +5,12 @@ using CreativeSpore.SuperTilemapEditor;
 
 public class GridManager : Singleton<GridManager> {
     private const string WORLD = "World";
-    public PlayerController playerController;
-    public GameObject[] locations;
     public event EventHandler<OnGridObjectChangedEventArgs> OnGridObjectChanged;
     public class OnGridObjectChangedEventArgs : EventArgs {
         public int x;
         public int y;
     }
-    public bool isLoading = false;
+    //public bool isLoading = false;
 
     private int width;
     private int height;
@@ -20,63 +18,83 @@ public class GridManager : Singleton<GridManager> {
     private Vector3 originPosition;
     private GridTile[,] gridArray;
     private Dictionary<string, GridTile[,]> grids = new Dictionary<string, GridTile[,]>();
-    private Dictionary<string, Vector3> entrances = new Dictionary<string, Vector3>();
+    private Dictionary<string, LocationTarget> entrances = new Dictionary<string, LocationTarget>();
     private Dictionary<string, TilemapGroup> maps = new Dictionary<string, TilemapGroup>();
-    private SaveLoadHandler saveLoadHandler;
-    private QuestHandler questHandler;
+    private TilemapGroup tilemapGroup;
 
     private void Start() {
-        PlayerPrefs.SetString("locationName", WORLD);
-        questHandler = GetComponent<QuestHandler>();
-        saveLoadHandler = GetComponent<SaveLoadHandler>();
-        Debug.Log("Start GridManager");
-        if (locations != null && locations.Length > 0) {
-            foreach (GameObject location in locations) {
-                entrances.Add(location.name, location.transform.position); 
-                maps.Add(location.name, location.GetComponentInChildren<TilemapGroup>());        
-            }
-        }
-        Debug.Log(maps.Count);
+    }
 
-        // Load the world by default
-        LoadMap(WORLD);
+    public void InitializeScene(TilemapGroup[] groups, LocationTarget[] locations) {
+        grids.Clear();
+        entrances.Clear();
+        maps.Clear();
+        tilemapGroup = null;
+
+        if (groups != null && groups.Length > 0) {
+            foreach (TilemapGroup group in groups) {
+                if (!maps.ContainsKey(group.name)) {
+                    maps.Add(group.name, group); 
+                }                      
+            }
+        } 
+        Debug.Log("Map count: " + maps.Count);
+
+        if (locations != null && locations.Length > 0) {
+            foreach (LocationTarget location in locations) {
+                if (!entrances.ContainsKey(location.name)) {
+                    entrances.Add(location.name, location);    
+                }    
+            }
+        } 
+        Debug.Log("Entrance count: " + entrances.Count);      
     }
 
     public void LoadMap(string locationName) {
-        isLoading = true;
-        //GetComponent<FadeHandler>().FadeOut();
-        StartCoroutine(GetComponent<FadeHandler>().FadeOut());
+        //isLoading = true;
+        //StartCoroutine(GetComponent<FadeHandler>().FadeOut());
         if (!maps.ContainsKey(locationName)) {
             locationName = WORLD;
         }
 
         Debug.Log("Load Location: " + locationName);
+    
+        // load the grid
+        PlayerPrefs.SetString("locationName", locationName);       
+        maps.TryGetValue(locationName, out tilemapGroup);
 
-        // toggle active state
-        foreach (TilemapGroup location in maps.Values) {
-            if (location.name.Equals(locationName)) {
-                location.gameObject.SetActive(true);
-            } else {
-                location.gameObject.SetActive(false);          
-            }
+        if (tilemapGroup == null) {
+            // something went horribly wrong
+            return;
         }
 
+        // toggle active state
+        tilemapGroup.gameObject.SetActive(true);
+        foreach (TilemapGroup location in maps.Values) {
+            if (!location.name.Equals(locationName)) {
+                location.gameObject.SetActive(false);          
+            }
+        }       
+
         // place the player
+        LocationData locationData = tilemapGroup.GetComponent<LocationData>();
         if (locationName.Equals(WORLD)) {
             // load from prefs, otherwise starting location
-            Vector3 playerPosition = PlayerPrefsX.GetVector3("playerPosition", playerController.startingLocation);
+            Vector3 playerPosition = PlayerPrefsX.GetVector3("playerPosition", locationData.startingLocation);
             // seems like the laoding causes float errors
             playerPosition.x = Mathf.FloorToInt(playerPosition.x) + 0.5f;
             playerPosition.y = Mathf.FloorToInt(playerPosition.y) + 0.5f;
-            playerController.transform.position = playerPosition;
+            EventManager.TriggerEvent("SetPlayerLocation", new Dictionary<string, object> { 
+                { "position", playerPosition },
+                { "direction", Direction.DOWN }
+            });
         } else {
-            playerController.transform.position = new Vector3(31.5f, 2.5f, 0.5f);
+            EventManager.TriggerEvent("SetPlayerLocation", new Dictionary<string, object> { 
+                { "position", locationData.startingLocation }, 
+                { "direction", Direction.UP } 
+            });
         }
             
-        // load the grid
-        PlayerPrefs.SetString("locationName", locationName);       
-        maps.TryGetValue(locationName, out TilemapGroup tilemapGroup);
-
         STETilemap tilemap = tilemapGroup.Tilemaps[0];
         this.width = tilemap.GridWidth;
         this.height = tilemap.GridHeight;
@@ -110,24 +128,16 @@ public class GridManager : Singleton<GridManager> {
             // cache for reuse
             grids.Add(tilemapGroup.name, gridArray);
 
-            bool showDebug = false;
+            bool showDebug = true;
             if (showDebug) {
-                //TextMesh[,] debugTextArray = new TextMesh[width, height];
-
                 for (int x = 0; x < gridArray.GetLength(0); x++) {
                     for (int y = 0; y < gridArray.GetLength(1); y++) {
-                        //debugTextArray[x, y] = UtilsClass.CreateWorldText(gridArray[x, y]?.ToString(), null, GetWorldPosition(x, y) + new Vector3(cellSize, cellSize) * .5f, 30, Color.white, TextAnchor.MiddleCenter);
-                        Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.white, 100f);
-                        Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.white, 100f);
+                        Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.gray, 100f);
+                        Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.gray, 100f);
                     }
                 }
-                Debug.DrawLine(GetWorldPosition(0, height), GetWorldPosition(width, height), Color.white, 100f);
-                Debug.DrawLine(GetWorldPosition(width, 0), GetWorldPosition(width, height), Color.white, 100f);
-
-
-                // OnGridObjectChanged += (object sender, OnGridObjectChangedEventArgs eventArgs) => {
-                //     debugTextArray[eventArgs.x, eventArgs.y].text = gridArray[eventArgs.x, eventArgs.y]?.ToString();
-                // };
+                Debug.DrawLine(GetWorldPosition(0, height), GetWorldPosition(width, height), Color.gray, 100f);
+                Debug.DrawLine(GetWorldPosition(width, 0), GetWorldPosition(width, height), Color.gray, 100f);
             }
         }
     }
@@ -196,26 +206,50 @@ public class GridManager : Singleton<GridManager> {
     public void IncrementTime(Vector3 location) {
         GridTile tile = GetGridTile(location);
         if (tile != null && tile.cost > 0) {
-            questHandler.IncrementTime(tile.cost);
+            EventManager.TriggerEvent("IncrementTime", new Dictionary<string, object> { 
+                { "minutes", tile.cost }
+            });
         }               
     }
 
     public void CheckEntrance(Vector3 targetLocation) {
-        Debug.Log("Check Entrance: " + targetLocation);
-        if (PlayerPrefs.GetString("locationName", WORLD).Equals(WORLD)) {
-            foreach (KeyValuePair<string, Vector3> entry in entrances) {
-                if (Vector3.Distance(entry.Value, targetLocation) <= 0.5f) {
-                    Debug.Log("Enter location: " + entry.Key);                
-                    saveLoadHandler.Save(true);
+        LocationData locationData = tilemapGroup.GetComponent<LocationData>();       
+        bool savePlayerPosition = false;
+        if (locationData.sceneName.Equals(WORLD)) {
+            savePlayerPosition = true;
+        }
+        Debug.Log("Check Entrances at: " + targetLocation);
+        foreach (KeyValuePair<string, LocationTarget> entry in entrances) {
+            if (entry.Value == null) continue;
+            Debug.Log("Check location: " + entry);  
+            if (Vector3.Distance(entry.Value.transform.position, targetLocation) <= 0.5f) {
+                Debug.Log("Enter location: " + entry.Key);                
+                EventManager.TriggerEvent("SaveGame", new Dictionary<string, object> { 
+                    { "savePlayerPosition", savePlayerPosition }
+                });
+                if (entry.Value.sceneName.Equals(locationData.sceneName)) {
                     LoadMap(entry.Key);
-                }
+                } else {
+                    EventManager.TriggerEvent("LoadScene", new Dictionary<string, object> { 
+                        { "sceneName", entry.Value.sceneName }, 
+                        { "activeLocation", entry.Value.activeLocation }
+                    });
+                }  
+                break;             
             }
-        } else  {
-            if (targetLocation.x < 1 || targetLocation.x > width - 1 || 
-            targetLocation.y < 1 || targetLocation.y > height - 1) {
-                saveLoadHandler.Save(false);
-                LoadMap(WORLD);
-            }
+        }
+
+        // check location edges
+        if (locationData.exitAtEdge && 
+                (targetLocation.x < 1 || targetLocation.x > width - 1 || 
+                targetLocation.y < 1 || targetLocation.y > height - 1)) {
+            EventManager.TriggerEvent("SaveGame", new Dictionary<string, object> { 
+                { "savePlayerPosition", false }
+            });
+            EventManager.TriggerEvent("LoadScene", new Dictionary<string, object> { 
+                { "sceneName", WORLD }, 
+                { "activeLocation", WORLD }
+            });
         }        
     }
 }
