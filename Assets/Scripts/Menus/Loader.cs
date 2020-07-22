@@ -13,6 +13,7 @@ public static class Loader {
         Loading,
         MainMenu,
         Locations,
+        Encounters
     }
 
     private static Action onLoaderCallback;

@@ -4,13 +4,9 @@ using UnityEngine;
 using CreativeSpore.SuperTilemapEditor;
 
 public class MonsterGenerator : MonoBehaviour {
-
     public int maximumMonsters;
-
     public int respawnRate;
-
     public PlayerController playerController;
-
     public List<GameObject> monsterPrefabs;
     private GridManager gridManager;
 

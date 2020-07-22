@@ -26,12 +26,17 @@ public class MonsterMover : MonoBehaviour {
     void Update() {
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, lerpSpeed * Time.deltaTime);
 
+        if (player == null) return;
+
         // check for fight
-        if (Vector3.Distance(transform.position, player.position) <= 0.01f) {
+        if (Vector3.Distance(transform.position, player.position) <= 0.05f) {
             isMoving = false;
-            Debug.Log("**********************  FIGHT  **********************");
+            EventManager.TriggerEvent("SaveGame", new Dictionary<string, object> { 
+                { "savePlayerPosition", true }
+            });
             StopAllCoroutines();
             KillMonster();
+            Loader.Load(Loader.Scene.Encounters, "Grassland");
         } else if (!isMoving && Vector3.Distance(transform.position, player.position) > 2f) {
             isMoving = true;
             StartCoroutine(HandleMove()); 
@@ -40,8 +45,12 @@ public class MonsterMover : MonoBehaviour {
 
     IEnumerator HandleMove() {
         float delay = attackDelay;   
+        if (player == null) {
+            yield return new WaitForSeconds(delay);
+        };
+        
         Vector3 targetLocation = Vector3.forward;   
-        if (Vector3.Distance(transform.position, player.position) <= range) {
+        if (player != null && Vector3.Distance(transform.position, player.position) <= range) {
             // move towards the player
             Vector3 vec = transform.position - player.position;
             vec.Normalize();
@@ -79,7 +88,11 @@ public class MonsterMover : MonoBehaviour {
                     targetLocation = movePoint.position + Vector3.down;
                 break;
             }
-        }    
+        }
+        // align the position
+        targetLocation.x = Mathf.FloorToInt(targetLocation.x) + 0.5f;
+        targetLocation.y = Mathf.FloorToInt(targetLocation.y) + 0.5f;             
+        targetLocation.z = 0.5f;
 
         if (targetLocation != Vector3.forward && gridManager.ValidateMove(targetLocation, allowedTiles)) {
             movePoint.position = targetLocation;

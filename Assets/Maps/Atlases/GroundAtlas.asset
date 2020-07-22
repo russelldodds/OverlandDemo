@@ -30,6 +30,8 @@ MonoBehaviour:
     BrushAsset: {fileID: 11400000, guid: bab971c6f306c41f08c5d12fe9f5fb1d, type: 2}
   - Id: 3
     BrushAsset: {fileID: 11400000, guid: 60177d087e2404c35857dcbb54580366, type: 2}
+  - Id: 4
+    BrushAsset: {fileID: 11400000, guid: 750a9325ea9a2421bb26e91a43c38825, type: 2}
   m_tiles:
   - uv:
       serializedVersion: 2
@@ -5654,4 +5656,4 @@ MonoBehaviour:
   - RoadBrush
   - CarpetBrush
   - BrushFortySeven
-  m_brushTypeMask: 5
+  m_brushTypeMask: -1

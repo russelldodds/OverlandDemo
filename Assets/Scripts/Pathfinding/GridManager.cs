@@ -76,7 +76,7 @@ public class GridManager : Singleton<GridManager> {
         LocationData locationData = tilemapGroup.GetComponent<LocationData>();
         if (locationName.Equals(Loader.Scene.World.ToString())) {
             // load from prefs, otherwise starting location
-            Vector3 playerPosition = PlayerPrefsX.GetVector3("playerPosition", locationData.startingLocation);
+            Vector3 playerPosition = PlayerPrefsX.GetVector3("playerPosition", locationData.GetRandomStartingLocation());
             // seems like the laoding causes float errors
             playerPosition.x = Mathf.FloorToInt(playerPosition.x) + 0.5f;
             playerPosition.y = Mathf.FloorToInt(playerPosition.y) + 0.5f;
@@ -86,7 +86,7 @@ public class GridManager : Singleton<GridManager> {
             });
         } else {
             EventManager.TriggerEvent("SetPlayerLocation", new Dictionary<string, object> { 
-                { "position", locationData.startingLocation }, 
+                { "position", locationData.GetRandomStartingLocation() }, 
                 { "direction", locationData.startingFacing } 
             });
         }

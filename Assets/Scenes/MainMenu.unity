@@ -982,7 +982,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: MAIN MENU
+  m_Text: OVERLAND DEMO
 --- !u!222 &2085375689
 CanvasRenderer:
   m_ObjectHideFlags: 0
