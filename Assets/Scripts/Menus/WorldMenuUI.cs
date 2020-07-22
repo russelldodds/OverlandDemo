@@ -5,9 +5,8 @@ using CodeMonkey.Utils;
 
 public class WorldMenuUI : MonoBehaviour {
     private void Awake() {
-        transform.Find("MainMenuBtn").GetComponent<Button_UI>().ClickFunc = () => {
-            Debug.Log("Click Main Menu");
-            
+        transform.Find("QuitBtn").GetComponent<Button_UI>().ClickFunc = () => {
+            Debug.Log("Click Quit");          
             Loader.Load(Loader.Scene.MainMenu);
         };
     }

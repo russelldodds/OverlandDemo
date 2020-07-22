@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
 
-public class MainMenu : MonoBehaviour {
+public class MainMenuUI : MonoBehaviour {
     private void Awake() {
         transform.Find("ContinueBtn").GetComponent<Button_UI>().ClickFunc = () => {
             Debug.Log("Click Continue");

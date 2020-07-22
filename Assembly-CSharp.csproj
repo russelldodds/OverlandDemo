@@ -103,7 +103,7 @@
      <Compile Include="Assets\Scripts\Location\LocationTarget.cs" />
      <Compile Include="Assets\Scripts\Menus\Loader.cs" />
      <Compile Include="Assets\Scripts\Menus\LoaderCallback.cs" />
-     <Compile Include="Assets\Scripts\Menus\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Menus\MainMenuUI.cs" />
      <Compile Include="Assets\Scripts\Menus\WorldMenuUI.cs" />
      <Compile Include="Assets\Scripts\Monster\MonsterGenerator.cs" />
      <Compile Include="Assets\Scripts\Monster\MonsterMover.cs" />
