@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using CreativeSpore.SuperTilemapEditor;
 
 public class GridManager : Singleton<GridManager> {
-    private const string WORLD = "World";
     public event EventHandler<OnGridObjectChangedEventArgs> OnGridObjectChanged;
     public class OnGridObjectChangedEventArgs : EventArgs {
         public int x;
@@ -75,7 +74,7 @@ public class GridManager : Singleton<GridManager> {
 
         // place the player
         LocationData locationData = tilemapGroup.GetComponent<LocationData>();
-        if (locationName.Equals(WORLD)) {
+        if (locationName.Equals(Loader.Scene.World.ToString())) {
             // load from prefs, otherwise starting location
             Vector3 playerPosition = PlayerPrefsX.GetVector3("playerPosition", locationData.startingLocation);
             // seems like the laoding causes float errors
@@ -88,7 +87,7 @@ public class GridManager : Singleton<GridManager> {
         } else {
             EventManager.TriggerEvent("SetPlayerLocation", new Dictionary<string, object> { 
                 { "position", locationData.startingLocation }, 
-                { "direction", Direction.UP } 
+                { "direction", locationData.startingFacing } 
             });
         }
             
@@ -125,7 +124,7 @@ public class GridManager : Singleton<GridManager> {
             // cache for reuse
             grids.Add(tilemapGroup.name, gridArray);
 
-            bool showDebug = true;
+            bool showDebug = false;
             if (showDebug) {
                 for (int x = 0; x < gridArray.GetLength(0); x++) {
                     for (int y = 0; y < gridArray.GetLength(1); y++) {
@@ -214,7 +213,7 @@ public class GridManager : Singleton<GridManager> {
         
         LocationData locationData = tilemapGroup.GetComponent<LocationData>();       
         bool savePlayerPosition = false;
-        if (locationData.sceneName.Equals(WORLD)) {
+        if (locationData.scene.Equals(Loader.Scene.World)) {
             savePlayerPosition = true;
         }
         Debug.Log("Check Entrances at: " + targetLocation);
@@ -225,14 +224,11 @@ public class GridManager : Singleton<GridManager> {
                 EventManager.TriggerEvent("SaveGame", new Dictionary<string, object> { 
                     { "savePlayerPosition", savePlayerPosition }
                 });
-                if (entry.Value.sceneName.Equals(locationData.sceneName)) {
+                if (entry.Value.scene.Equals(locationData.scene)) {
                     PlayerPrefs.SetString("locationName", entry.Value.activeLocation);
                     LoadMap(entry.Key);
                 } else {
-                    EventManager.TriggerEvent("LoadScene", new Dictionary<string, object> { 
-                        { "sceneName", entry.Value.sceneName }, 
-                        { "activeLocation", entry.Value.activeLocation }
-                    });
+                    Loader.Load(entry.Value.scene, entry.Value.activeLocation);
                 }  
                 break;             
             }
@@ -245,10 +241,7 @@ public class GridManager : Singleton<GridManager> {
             EventManager.TriggerEvent("SaveGame", new Dictionary<string, object> { 
                 { "savePlayerPosition", false }
             });
-            EventManager.TriggerEvent("LoadScene", new Dictionary<string, object> { 
-                { "sceneName", WORLD }, 
-                { "activeLocation", WORLD }
-            });
+            Loader.Load(Loader.Scene.World, Loader.Scene.World.ToString());
         }        
     }
 }

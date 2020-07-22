@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LocationTarget : MonoBehaviour {
 
-    public string sceneName;
+    public Loader.Scene scene;
 
     public string activeLocation;
 

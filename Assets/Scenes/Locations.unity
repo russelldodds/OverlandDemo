@@ -829,8 +829,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a77ea8d1e0ca40fd9e3694bd9a2336a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Locations
+  scene: 3
   startingLocation: {x: 2.5, y: 31.5, z: 0.5}
+  startingFacing: 3
   exitAtEdge: 1
 --- !u!4 &1414066043581700714
 Transform:
@@ -1664,8 +1665,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a77ea8d1e0ca40fd9e3694bd9a2336a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Locations
+  scene: 3
   startingLocation: {x: 31.5, y: 2.5, z: 0.5}
+  startingFacing: 0
   exitAtEdge: 1
 --- !u!114 &5950023204552975652
 MonoBehaviour:

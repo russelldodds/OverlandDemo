@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - StopMovement
+  - 
   - 
   - 
   - 
@@ -40,7 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Test
-    uniqueID: 6954677
     locked: 0
