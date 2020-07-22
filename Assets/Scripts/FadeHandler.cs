@@ -10,6 +10,7 @@ public class FadeHandler : MonoBehaviour {
 
     void Start() {
         image = fadeImage.GetComponent<Image>();
+        StartCoroutine(FadeOut());
     }
 
     public IEnumerator FadeOut() {
@@ -26,7 +27,5 @@ public class FadeHandler : MonoBehaviour {
         // once done inactivate again
         yield return new WaitForSeconds(fadeSpeed);
         image.gameObject.SetActive(false);
-
-        //GridManager.Instance.isLoading = false;
     }
 }
